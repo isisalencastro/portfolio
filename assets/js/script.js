@@ -83,7 +83,7 @@ mobileMenu.querySelectorAll("a").forEach(link => {
 const texts = [
     "Desenvolvedora Full-Stack",
     "Gestora de Automação",
-    "Especialista em Marketing Digital"
+    "Analista de Marketing Digital"
 ];
 
 const typingElement = document.getElementById("auto-typing");
@@ -178,3 +178,4 @@ document.getElementById('btn-email').addEventListener('click', () => {
         alert('Email copiado: ' + email);
     });
 });
+
