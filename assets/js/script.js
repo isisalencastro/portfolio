@@ -82,7 +82,7 @@ mobileMenu.querySelectorAll("a").forEach(link => {
 // ------------------------ AUTOTYPING AREAS DE TRABALHO ---------------------------------
 const texts = [
     "Desenvolvedora Full-Stack",
-    "Gestora de Automação",
+    "Gestora de Automações",
     "Analista de Marketing Digital"
 ];
 
@@ -178,4 +178,5 @@ document.getElementById('btn-email').addEventListener('click', () => {
         alert('Email copiado: ' + email);
     });
 });
+
 
