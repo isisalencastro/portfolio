@@ -628,7 +628,13 @@ header nav a:hover::after {
     width: 24px;
 }
 
-
+.botoes-modal a{
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--background-color);
+    letter-spacing: 1px;
+}
 
 /*---------------------- PROJETOS STYLES ---------------------------*/
 
@@ -923,4 +929,5 @@ header nav a:hover::after {
 
 #btn-topo:hover {
     background-color: #0f3d7a;
+
 }
