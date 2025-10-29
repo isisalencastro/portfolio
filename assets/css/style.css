@@ -627,6 +627,9 @@ header nav a:hover::after {
 #carrossel-servicos button img {
     width: 24px;
 }
+
+
+
 /*---------------------- PROJETOS STYLES ---------------------------*/
 
 #projetos {
@@ -920,7 +923,5 @@ header nav a:hover::after {
 
 #btn-topo:hover {
     background-color: #0f3d7a;
-
 }
-
 
