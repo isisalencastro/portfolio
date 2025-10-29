@@ -63,22 +63,21 @@ html, body {
     
 }
 
-.botoes-modal a{
-    text-decoration: none;
-    color: var(--background-color);
+.botoes-modal button{
     background-color: var(--primary-color);
     border: none;
+    font-size: 14px;
     padding: 12px;
     margin: 12px;
-    border-radius: 4px;
-}
-
-.botoes-modal button{
-    border: none;
-    font-size: 14px;
     color: var(--background-color);
     font-weight: bold;
     text-transform: uppercase;
+    border-radius: 4px;
+}
+
+.botoes-modal a{
+    text-decoration: none;
+    color: var(--background-color);
 }
 
 .botoes-modal button:hover{
@@ -923,4 +922,5 @@ header nav a:hover::after {
     background-color: #0f3d7a;
 
 }
+
 
