@@ -63,21 +63,22 @@ html, body {
     
 }
 
-.botoes-modal button{
-    background-color: var(--primary-color);
-    border: none;
-    font-size: 14px;
-    padding: 12px;
-    margin: 12px;
-    color: var(--background-color);
-    font-weight: bold;
-    text-transform: uppercase;
-    border-radius: 4px;
-}
-
 .botoes-modal a{
     text-decoration: none;
     color: var(--background-color);
+    background-color: var(--primary-color);
+    border: none;
+    padding: 12px;
+    margin: 12px;
+    border-radius: 4px;
+}
+
+.botoes-modal button{
+    border: none;
+    font-size: 14px;
+    color: var(--background-color);
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 .botoes-modal button:hover{
@@ -627,15 +628,6 @@ header nav a:hover::after {
 #carrossel-servicos button img {
     width: 24px;
 }
-
-.botoes-modal a{
-    text-decoration: none;
-    font-weight: 600;
-    text-transform: uppercase;
-    color: var(--background-color);
-    letter-spacing: 1px;
-}
-
 /*---------------------- PROJETOS STYLES ---------------------------*/
 
 #projetos {
@@ -931,3 +923,4 @@ header nav a:hover::after {
     background-color: #0f3d7a;
 
 }
+
