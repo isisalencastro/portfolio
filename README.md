@@ -127,7 +127,7 @@ Não é necessário servidor nem instalação de dependências; o projeto é est
 
 ## Licença e créditos
 
-© 2025 — Todos os direitos reservados.  
+© 2026 — Todos os direitos reservados.  
 Design e código por **Isis Beatriz de Alencastro**.
 
 ---
