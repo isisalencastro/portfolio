@@ -1,67 +1,92 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./assets/css/style.css">
-        <link rel="stylesheet" href="./assets/css/responsividade.css">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Todos os projetos de Isis Beatriz de Alencastro: Prompt Manager, Portfólio, Vivi Delfino Psicanalista. Desenvolvimento web, HTML, CSS e JavaScript." />
+        <meta name="keywords" content="projetos, Isis Alencastro, desenvolvimento web, portfólio, RocketSeat, NLW" />
+        <meta name="author" content="Isis Beatriz de Alencastro" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://isisalencastro.github.io/portfolio/projetos.html" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://isisalencastro.github.io/portfolio/projetos.html" />
+        <meta property="og:title" content="Projetos | Isis Alencastro — Portfólio" />
+        <meta property="og:description" content="Conheça os projetos de Isis Alencastro: desenvolvimento web, automação e sites." />
+        <meta property="og:locale" content="pt_BR" />
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Projetos | Isis Alencastro" />
+        <meta name="twitter:description" content="Projetos de desenvolvimento web e portfólio." />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preload" href="./assets/css/style.css" as="style" />
+        <link rel="preload" href="./assets/css/responsividade.css" as="style" />
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="./assets/css/style.css" />
+        <link rel="stylesheet" href="./assets/css/responsividade.css" />
         <link rel="icon" href="./assets/images/fotos/my-notion-face-portrait.png" type="image/png" />
-        <title>Isis Alencastro | Projetos</title>
+        <meta name="theme-color" content="#2563eb" />
+        <meta name="color-scheme" content="light dark" />
+        <title>Projetos | Isis Alencastro — Portfólio</title>
     </head>
     <body>
         <header>
-            <h2 class="logo">IBA</h2>
+            <h2 class="logo"><a href="./index.html">IBA</a></h2>
             <nav aria-label="Menu principal">
                 <ul>
-                    <li><a href="./index.html#projetos">Home</a></li>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./index.html#projetos">Projetos</a></li>
+                    <li><a href="./index.html#contato">Contato</a></li>
                 </ul>
-                <button id="dark-mode-toggle" class="dark-mode-btn">
-                    <img src="./assets/images/icons/moon.svg" alt="">
-                    <img src="./assets/images/icons/sun.svg" alt="">
+                <button type="button" id="dark-mode-toggle" class="dark-mode-btn" aria-label="Alternar modo escuro">
+                    <img src="./assets/images/icons/moon.svg" alt="" width="24" height="24" />
+                    <img src="./assets/images/icons/sun.svg" alt="" width="24" height="24" />
                 </button>
             </nav>
         </header>
 
+        <main>
         <section id="projetos" aria-labelledby="projetos-titulo">
-            <h3 id="projetos-titulo">Todos os Projetos</h3>
+            <h2 id="projetos-titulo" class="titulo-secao">Todos os Projetos</h2>
             <div id="lista-projetos">
-                <article class="projeto">
-                    <img src="./assets/images/capas-projetos/capa-proj-prompt.png" alt="Capa do projeto Prompt Manager da RocketSeat" />
+                <article class="projeto" itemscope itemtype="https://schema.org/CreativeWork">
+                    <img src="./assets/images/capas-projetos/capa-proj-prompt.png" alt="Capa do projeto Prompt Manager da RocketSeat" width="300" height="200" loading="lazy" />
                     <div class="infos-projeto">
-                        <h4>Prompt Manager</h4>
-                        <p>Sistema onde podemos armazenar prompts feito na imersão NLW da rocketseat.</p>
+                        <h3>Prompt Manager</h3>
+                        <p>Sistema onde podemos armazenar prompts feito na imersão NLW da RocketSeat.</p>
                         <p>Desenvolvido em 2025.</p>
-                        <a href="https://isisalencastro.github.io/promptmanager/" class="btn-projeto" target="_blank">Ver Projeto</a>
+                        <a href="https://isisalencastro.github.io/promptmanager/" class="btn-projeto" target="_blank" rel="noopener noreferrer">Ver Projeto</a>
                     </div>
                 </article>
-                
-                <article class="projeto">
-                    <img src="./assets/images/capas-projetos/capa-proj-isisalencastro.png" alt="Capa do projeto do Portfólio de Isis Alencastro" />
+                <article class="projeto" itemscope itemtype="https://schema.org/CreativeWork">
+                    <img src="./assets/images/capas-projetos/capa-proj-isisalencastro.png" alt="Capa do projeto do Portfólio de Isis Alencastro" width="300" height="200" loading="lazy" />
                     <div class="infos-projeto">
-                        <h4>Portfólio Isis Alencastro</h4>
+                        <h3>Portfólio Isis Alencastro</h3>
                         <p>Meu portfólio profissional, feito com HTML, CSS e JavaScript.</p>
                         <p>Desenvolvido em 2025.</p>
-                        <a href="#" class="btn-projeto">Ver Projeto</a>
+                        <a href="./index.html" class="btn-projeto">Ver Projeto</a>
                     </div>
                 </article>
-
-                <article class="projeto">
-                    <img src="./assets/images/capas-projetos/capa-proj-vividelfino.png" alt="Capa do projeto site Vivi Delfino Psicanalista" />
+                <article class="projeto" itemscope itemtype="https://schema.org/CreativeWork">
+                    <img src="./assets/images/capas-projetos/capa-proj-vividelfino.png" alt="Capa do projeto site Vivi Delfino Psicanalista" width="300" height="200" loading="lazy" />
                     <div class="infos-projeto">
-                        <h4>Vivi Delfino - Psicanalista</h4>
+                        <h3>Vivi Delfino - Psicanalista</h3>
                         <p>Site para a psicanalista Viviane Delfino, feito com HTML, CSS e JavaScript.</p>
                         <p>Desenvolvido em 2024.</p>
-                        <a href="https://isisalencastro.github.io/ViviDelfinoPsicanalaista/" target="_blank" rel="noopener" class="btn-projeto">Ver Projeto</a>
+                        <a href="https://isisalencastro.github.io/ViviDelfinoPsicanalaista/" target="_blank" rel="noopener noreferrer" class="btn-projeto">Ver Projeto</a>
                     </div>
                 </article>
             </div>
         </section>
+        </main>
         <footer id="contato" aria-labelledby="contato-titulo">
             <div id="titulos-contato">
                 <h3 id="contato-titulo">Contato</h3>
                 <p>Tem algum projeto em mente?</p>
                 <p>Entre em contato comigo!</p>
-                <button id="btn-email" aria-label="Copiar email">Copiar email</button>
+                <button type="button" id="btn-email" aria-label="Copiar email">Copiar email</button>
             </div>
 
 
@@ -80,15 +105,15 @@
 
                 <section class="redes">
                     <h4>Redes Sociais</h4>
-                    <a href="https://www.linkedin.com/in/isisalencastro/" target="_blank" rel="noopener" class="links-contato">LinkedIn</a>
-                    <a href="https://github.com/isisalencastro" target="_blank" rel="noopener" class="links-contato">GitHub</a>
-                    <a href="https://www.youtube.com/@IsisAlencastro" target="_blank" rel="noopener" class="links-contato">YouTube</a>
-                    <a href="https://linktr.ee/isisalencastro" target="_blank" rel="noopener" class="links-contato">Linktree</a>
+                    <a href="https://www.linkedin.com/in/isisalencastro/" target="_blank" rel="noopener noreferrer" class="links-contato">LinkedIn</a>
+                    <a href="https://github.com/isisalencastro" target="_blank" rel="noopener noreferrer" class="links-contato">GitHub</a>
+                    <a href="https://www.youtube.com/@IsisAlencastro" target="_blank" rel="noopener noreferrer" class="links-contato">YouTube</a>
+                    <a href="https://linktr.ee/isisalencastro" target="_blank" rel="noopener noreferrer" class="links-contato">Linktree</a>
                 </section>
 
                 <section class="redes">
                 <h4>Me escreva</h4>
-                <a href="https://wa.me/message/GGEAJPHMSN6MD1" target="_blank" rel="noopener" class="links-contato">WhatsApp</a>
+                <a href="https://wa.me/message/GGEAJPHMSN6MD1" target="_blank" rel="noopener noreferrer" class="links-contato">WhatsApp</a>
                 </section>
             </div>
 
@@ -97,41 +122,8 @@
             </div>
         </footer>
 
-        <button id="btn-topo" onclick="voltarAoTopo()"><img src="./assets/images/icons/arrow-up-svgrepo-com.svg" alt="seta apontando para cima"></button>
+        <button type="button" id="btn-topo" aria-label="Voltar ao topo da página"><img src="./assets/images/icons/arrow-up-svgrepo-com.svg" alt="" width="24" height="24" /></button>
 
     </body>
-        <script>
-            let darkmode = localStorage.getItem('darkmode');
-            const themeSwitch = document.getElementById('dark-mode-toggle');
-
-            const enableDarkMode = () => {
-                document.body.classList.add('darkmode');
-                localStorage.setItem('darkmode', 'active');
-            }
-
-            const disableDarkMode = () => {
-                document.body.classList.remove('darkmode');
-                localStorage.setItem('darkmode', 'inactive');
-            }
-
-            if(darkmode === "active") enableDarkMode()
-
-            themeSwitch.addEventListener('click', () => {
-                dark = localStorage.getItem('darkmode')
-                darkmode !== 'active' ? enableDarkMode() : disableDarkMode();
-            });
-
-            themeSwitch.addEventListener("click", function() {
-            console.log("Ação realizada!");
-            window.location.reload();
-            })
-
-            document.getElementById('btn-email').addEventListener('click', () => {
-                const email = document.getElementById('email').textContent;
-                navigator.clipboard.writeText(email).then(() => {
-                    alert('Email copiado: ' + email);
-                });
-            });
-        </script>
-
+    <script src="./assets/js/script.js" defer></script>
 </html>

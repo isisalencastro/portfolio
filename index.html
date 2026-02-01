@@ -1,11 +1,68 @@
+<!DOCTYPE html>
 <html lang="pt-BR">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="./assets/css/style.css"/>
-        <link rel="stylesheet" href="./assets/css/responsividade.css"/>
+        <meta name="description" content="Portfólio de Isis Beatriz de Alencastro — Desenvolvedora Full-Stack, Gestora de Automações com IA e Analista de Marketing Digital. Serviços: automação, desenvolvimento web, gestão de tráfego e consultoria. Porto Alegre, RS." />
+        <meta name="keywords" content="Isis Alencastro, portfólio, desenvolvedora, automação IA, marketing digital, desenvolvimento web, Porto Alegre" />
+        <meta name="author" content="Isis Beatriz de Alencastro" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://isisalencastro.github.io/portfolio/" />
+
+        <!-- Open Graph -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://isisalencastro.github.io/portfolio/" />
+        <meta property="og:title" content="Isis Alencastro | Portfólio — Desenvolvimento Web e Automação com IA" />
+        <meta property="og:description" content="Portfólio de Isis Beatriz de Alencastro. Desenvolvedora Full-Stack, automações com IA e marketing digital. Porto Alegre, RS." />
+        <meta property="og:image" content="https://isisalencastro.github.io/portfolio/assets/images/fotos/foto-isisalencastro.png" />
+        <meta property="og:image:alt" content="Foto de Isis Beatriz de Alencastro" />
+        <meta property="og:locale" content="pt_BR" />
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Isis Alencastro | Portfólio" />
+        <meta name="twitter:description" content="Desenvolvedora Full-Stack, automações com IA e marketing digital. Porto Alegre, RS." />
+        <meta name="twitter:image" content="https://isisalencastro.github.io/portfolio/assets/images/fotos/foto-isisalencastro.png" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preload" href="./assets/css/style.css" as="style" />
+        <link rel="preload" href="./assets/css/responsividade.css" as="style" />
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="./assets/css/style.css" />
+        <link rel="stylesheet" href="./assets/css/responsividade.css" />
         <link rel="icon" href="./assets/images/fotos/my-notion-face-portrait.png" type="image/png" />
-        <title>Isis Alencastro | Portfólio</title>
+        <meta name="theme-color" content="#2563eb" />
+        <meta name="color-scheme" content="light dark" />
+        <title>Isis Alencastro | Portfólio — Desenvolvimento Web e Automação com IA</title>
+
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Isis Beatriz de Alencastro",
+            "url": "https://isisalencastro.github.io/portfolio/",
+            "image": "https://isisalencastro.github.io/portfolio/assets/images/fotos/foto-isisalencastro.png",
+            "jobTitle": "Desenvolvedora Full-Stack",
+            "worksFor": { "@type": "Organization", "name": "Freelancer" },
+            "address": { "@type": "PostalAddress", "addressLocality": "Porto Alegre", "addressRegion": "RS" },
+            "email": "alencastroisis@gmail.com",
+            "sameAs": [
+                "https://www.linkedin.com/in/isisalencastro/",
+                "https://github.com/isisalencastro",
+                "https://www.youtube.com/@IsisAlencastro"
+            ]
+        }
+        </script>
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Portfólio Isis Alencastro",
+            "url": "https://isisalencastro.github.io/portfolio/",
+            "author": { "@type": "Person", "name": "Isis Beatriz de Alencastro" }
+        }
+        </script>
     </head>
 
     <body>
@@ -18,14 +75,14 @@
                     <li><a href="#projetos">Projetos</a></li>
                     <li><a href="#contato">Contato</a></li>
                 </ul>
-                <button id="dark-mode-toggle" class="dark-mode-btn">
-                    <img src="./assets/images/icons/moon.svg" alt="">
-                    <img src="./assets/images/icons/sun.svg" alt="">
+                <button id="dark-mode-toggle" class="dark-mode-btn" type="button" aria-label="Alternar modo escuro">
+                    <img src="./assets/images/icons/moon.svg" alt="" width="24" height="24" />
+                    <img src="./assets/images/icons/sun.svg" alt="" width="24" height="24" />
                 </button>
             </nav>
 
             <!-- Botão hamburguer para mobile -->
-            <button id="menu-toggle" class="menu-btn" aria-label="Abrir menu">
+            <button type="button" id="menu-toggle" class="menu-btn" aria-label="Abrir menu">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -45,7 +102,7 @@
         <main>
             <section id="home" aria-labelledby="apresentacao">
                 <div id="apresentacao">
-                    <figure><img src="./assets/images/fotos/minha-face-notion.png" alt="Retrato estilizado de Isis Beatriz no estilo Notion" id="foto-notion" /></figure>
+                    <figure><img src="./assets/images/fotos/minha-face-notion.png" alt="Retrato estilizado de Isis Beatriz no estilo Notion" id="foto-notion" width="480" height="480" /></figure>
                     <div id="texto-apresentacao">
                         <div>
                             <p id="ola-principal">Olá mundo,</p>
@@ -53,7 +110,7 @@
                             <h1>Isis Beatriz de Alencastro</h1>
                             <p>e sou <span id="auto-typing"></span></p>
                         </div>
-                        <a class="btn" href="./assets/docs/CurriculoIsisAlencastro.pdf" target="_blank" rel="noopener">Baixar CV</a>
+                        <a class="btn" href="./assets/docs/CurriculoIsisAlencastro.pdf" target="_blank" rel="noopener noreferrer">Baixar CV</a>
                     </div>
                 </div>
 
@@ -93,7 +150,7 @@
                 <div id="sobre-mim">
                     <section id="dados-sobre">
                     <figure id="foto-sobre">
-                    <img src="./assets/images/fotos/foto-isisalencastro.png" alt="Foto real de Isis Beatriz de Alencastro" />
+                    <img src="./assets/images/fotos/foto-isisalencastro.png" alt="Foto real de Isis Beatriz de Alencastro" width="240" height="240" loading="lazy" />
                     </figure>
                     <div id="infos-sobre">
                         <p><strong>Nome:</strong> Isis Beatriz de Alencastro</p>
@@ -101,9 +158,9 @@
                         <p><strong>Localização:</strong> Porto Alegre, RS</p>
                         <p><strong>Formação:</strong> Ciência da Computação (cursando)</p>
                         <div id="redes-sociais">
-                            <a href="https://www.linkedin.com/in/isisalencastro/" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="./assets/images/social/linkedin-svgrepo-com.svg" alt="Logo LinkedIn" /></a>
-                            <a href="https://www.youtube.com/@IsisAlencastro" target="_blank" rel="noopener" aria-label="YouTube"><img src="./assets/images/social/youtube-168-svgrepo-com.svg" alt="Logo YouTube" /></a>
-                            <a href="https://github.com/isisalencastro" target="_blank" rel="noopener" aria-label="GitHub"><img src="./assets/images/social/github-svgrepo-com.svg" alt="Logo GitHub" /></a>
+                            <a href="https://www.linkedin.com/in/isisalencastro/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><img src="./assets/images/social/linkedin-svgrepo-com.svg" alt="Logo LinkedIn" width="34" height="34" /></a>
+                            <a href="https://www.youtube.com/@IsisAlencastro" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><img src="./assets/images/social/youtube-168-svgrepo-com.svg" alt="Logo YouTube" width="34" height="34" /></a>
+                            <a href="https://github.com/isisalencastro" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><img src="./assets/images/social/github-svgrepo-com.svg" alt="Logo GitHub" width="34" height="34" /></a>
                         </div>
                     </div>
                     </section>
@@ -118,32 +175,32 @@
             <section id="servicos">
                 <h3>Serviços</h3>
                 <div id="carrossel-servicos">
-                    <button id="prev-servico"><img src="./assets/images/icons/angle-left.svg" alt="Anterior"></button>
+                    <button type="button" id="prev-servico" aria-label="Serviço anterior"><img src="./assets/images/icons/angle-left.svg" alt="" width="24" height="24" /></button>
                     <div id="lista-servicos">
                     <div class="servico">
-                        <img src="./assets/images/icons/robot.svg" alt="Automação com IA" />
+                        <img src="./assets/images/icons/robot.svg" alt="Automação com IA" width="80" height="80" />
                         <h4>Automação com IA</h4>
                         <p>Criação de fluxos inteligentes, integrações entre ferramentas e chatbots para otimizar processos manuais e ganhar eficiência.</p>
-                        <button class="btn-saiba-mais" data-modal="modal-automacao">Saiba Mais</button>
+                        <button type="button" class="btn-saiba-mais" data-modal="modal-automacao">Saiba Mais</button>
                     </div>
                     <div class="container-modal">
                         <div class="modal" id="modal-automacao">
                             <h4>Automação com IA</h4>
-                                <p>Eu acredito que o tempo é o recurso mais valioso que temos. Por isso, desenvolvo automações inteligentes que eliminam tarefas repetitivas e otimizam processos. Isso significa mais eficiência, menos erros e liberdade para focar no que realmente importa: o crescimento do seu negócio.,</br> </br>
-                                <strong>Benefícios:</strong> ganho de tempo, aumento da produtividade e redução de custos operacionais.</br>
+                                <p>Eu acredito que o tempo é o recurso mais valioso que temos. Por isso, desenvolvo automações inteligentes que eliminam tarefas repetitivas e otimizam processos. Isso significa mais eficiência, menos erros e liberdade para focar no que realmente importa: o crescimento do seu negócio.<br><br>
+                                <strong>Benefícios:</strong> ganho de tempo, aumento da produtividade e redução de custos operacionais.<br>
                                 <strong>Valor:</strong> A combinar.</p>
                                 <div class="botoes-modal">
-                                    <button><a href="https://wa.me/message/GGEAJPHMSN6MD1" target="_blank">Entre em contato</a></button>
-                                    <button class="close">Fechar</button>
+                                    <a href="https://wa.me/message/GGEAJPHMSN6MD1" target="_blank" rel="noopener noreferrer" class="btn-modal-link">Entre em contato</a>
+                                    <button type="button" class="close">Fechar</button>
                                 </div>
                         </div>
                     </div>
 
                     <div class="servico">
-                        <img src="./assets/images/icons/website.svg" alt="Desenvolvimento Web" />
+                        <img src="./assets/images/icons/website.svg" alt="Desenvolvimento Web" width="80" height="80" />
                         <h4>Desenvolvimento Web</h4>
                         <p>Sites institucionais, landing pages e portfólios responsivos, com foco em performance, design moderno e usabilidade.</p>
-                        <button class="btn-saiba-mais" data-modal="modal-devweb">Saiba Mais</button>
+                        <button type="button" class="btn-saiba-mais" data-modal="modal-devweb">Saiba Mais</button>
                     </div>
                     <div class="container-modal">
                         <div class="modal" id="modal-devweb">
@@ -152,17 +209,17 @@
                             <strong>Benefícios:</strong> presença digital sólida, credibilidade no mercado e maior conversão de visitantes em clientes. <br>
                             <strong>Valor:</strong> A combinar.</p>
                             <div class="botoes-modal">
-                                <button><a href="https://wa.me/message/GGEAJPHMSN6MD1" target="_blank">Entre em contato</a></button>
-                                <button class="close">Fechar</button>
-                            </div>'
+                                <a href="https://wa.me/message/GGEAJPHMSN6MD1" target="_blank" rel="noopener noreferrer" class="btn-modal-link">Entre em contato</a>
+                                <button type="button" class="close">Fechar</button>
+                            </div>
                         </div>
                     </div>
 
                     <div class="servico">
-                        <img src="./assets/images/icons/ads.svg" alt="Gestão de Tráfego" />
+                        <img src="./assets/images/icons/ads.svg" alt="Gestão de Tráfego" width="80" height="80" />
                         <h4>Gestão de Tráfego</h4>
                         <p>Criação de campanhas no Google Ads e Meta Ads, SEO básico e estratégias para aumentar sua presença online e atrair clientes.</p>
-                        <button class="btn-saiba-mais" data-modal="modal-ads">Saiba Mais</button>
+                        <button type="button" class="btn-saiba-mais" data-modal="modal-ads">Saiba Mais</button>
                     </div>
                     <div class="container-modal">
                         <div class="modal" id="modal-ads">
@@ -171,17 +228,17 @@
                             <strong>Benefícios:</strong> mais visibilidade, atração de clientes qualificados e aumento nas vendas. <br>
                             <strong>Valor:</strong> A combinar.</p>
                             <div class="botoes-modal">
-                                <button><a href="https://wa.me/message/GGEAJPHMSN6MD1" target="_blank">Entre em contato</a></button>
-                                <button class="close">Fechar</button>
+                                <a href="https://wa.me/message/GGEAJPHMSN6MD1" target="_blank" rel="noopener noreferrer" class="btn-modal-link">Entre em contato</a>
+                                <button type="button" class="close">Fechar</button>
                             </div>
                         </div>
                     </div>
 
                     <div class="servico">
-                        <img src="./assets/images/icons/computer-pc-desktop.svg" alt="Montagem e Manutenção de PCs"/>
+                        <img src="./assets/images/icons/computer-pc-desktop.svg" alt="Montagem e Manutenção de PCs" width="80" height="80" />
                         <h4>Montagem e Manutenção</h4>
                         <p>Consultoria de peças, montagem de computadores personalizados e manutenção preventiva e corretiva de desktops.</p>
-                        <button class="btn-saiba-mais" data-modal="modal-manut">Saiba Mais</button>
+                        <button type="button" class="btn-saiba-mais" data-modal="modal-manut">Saiba Mais</button>
                     </div>
                     <div class="container-modal">
                         <div class="modal" id="modal-manut">
@@ -190,18 +247,18 @@
                             <strong>Benefícios:</strong> desempenho otimizado, redução de falhas e economia a longo prazo.<br>
                             <strong>Valor:</strong> A combinar.</p>
                             <div class="botoes-modal">
-                                <button><a href="https://wa.me/message/GGEAJPHMSN6MD1" target="_blank">Entre em contato</a></button>
-                                <button class="close">Fechar</button>
+                                <a href="https://wa.me/message/GGEAJPHMSN6MD1" target="_blank" rel="noopener noreferrer" class="btn-modal-link">Entre em contato</a>
+                                <button type="button" class="close">Fechar</button>
                             </div>
                         </div>
                     </div>
 
 
                     <div class="servico">
-                        <img src="./assets/images/icons/headset-help.svg" alt="Consultoria Digital"/>
+                        <img src="./assets/images/icons/headset-help.svg" alt="Consultoria Digital" width="80" height="80" />
                         <h4>Consultoria Digital</h4>
                         <p>Mentorias e consultorias estratégicas para alinhar tecnologia e negócios, ajudando a escolher as melhores soluções digitais.</p>
-                        <button class="btn-saiba-mais" data-modal="modal-consultoria">Saiba Mais</button>
+                        <button type="button" class="btn-saiba-mais" data-modal="modal-consultoria">Saiba Mais</button>
                     </div>
                     <div class="container-modal">
                         <div class="modal" id="modal-consultoria">
@@ -210,30 +267,30 @@
                             <strong>Benefícios:</strong> decisões mais assertivas, redução de riscos e aumento dos resultados. <br>
                             <strong>Valor:</strong> A combinar.</p>
                             <div class="botoes-modal">
-                                    <button><a href="https://wa.me/message/GGEAJPHMSN6MD1" target="_blank">Entre em contato</a></button>
-                                    <button class="close">Fechar</button>
+                                    <a href="https://wa.me/message/GGEAJPHMSN6MD1" target="_blank" rel="noopener noreferrer" class="btn-modal-link">Entre em contato</a>
+                                    <button type="button" class="close">Fechar</button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <button id="next-servico"><img src="./assets/images/icons/angle-right.svg" alt="Próximo"></button>
+                <button type="button" id="next-servico" aria-label="Próximo serviço"><img src="./assets/images/icons/angle-right.svg" alt="" width="24" height="24" /></button>
             </section>
 
             <section id="projetos" aria-labelledby="projetos-titulo">
                 <h3 id="projetos-titulo">Projetos</h3>
                 <div id="lista-projetos">
                     <article class="projeto">
-                        <img src="./assets/images/capas-projetos/capa-proj-prompt.png" alt="Capa do projeto Prompt Manager da RocketSeat" />
+                        <img src="./assets/images/capas-projetos/capa-proj-prompt.png" alt="Capa do projeto Prompt Manager da RocketSeat" width="300" height="200" loading="lazy" />
                         <div class="infos-projeto">
                             <h4>Prompt Manager</h4>
                             <p>Sistema onde podemos armazenar prompts feito na imersão NLW da rocketseat.</p>
                             <p>Desenvolvido em 2025.</p>
-                            <a href="https://isisalencastro.github.io/promptmanager/" class="btn-projeto">Ver Projeto</a>
+                            <a href="https://isisalencastro.github.io/promptmanager/" class="btn-projeto" target="_blank" rel="noopener noreferrer">Ver Projeto</a>
                         </div>
                     </article>
 
                     <article class="projeto">
-                        <img src="./assets/images/capas-projetos/capa-proj-isisalencastro.png" alt="Capa do projeto do Portfólio de Isis Alencastro" />
+                        <img src="./assets/images/capas-projetos/capa-proj-isisalencastro.png" alt="Capa do projeto do Portfólio de Isis Alencastro" width="300" height="200" loading="lazy" />
                         <div class="infos-projeto">
                             <h4>Portfólio Isis Alencastro</h4>
                             <p>Meu portfólio profissional, feito com HTML, CSS e JavaScript.</p>
@@ -251,7 +308,7 @@
                 <h3 id="contato-titulo">Contato</h3>
                 <p>Tem algum projeto em mente?</p>
                 <p>Entre em contato comigo!</p>
-                <button id="btn-email" aria-label="Copiar email">Copiar email</button>
+                <button type="button" id="btn-email" aria-label="Copiar email">Copiar email</button>
             </div>
 
 
@@ -270,15 +327,15 @@
 
                 <section class="redes">
                     <h4>Redes Sociais</h4>
-                    <a href="https://www.linkedin.com/in/isisalencastro/" target="_blank" rel="noopener" class="links-contato">LinkedIn</a>
-                    <a href="https://github.com/isisalencastro" target="_blank" rel="noopener" class="links-contato">GitHub</a>
-                    <a href="https://www.youtube.com/@IsisAlencastro" target="_blank" rel="noopener" class="links-contato">YouTube</a>
-                    <a href="https://linktr.ee/isisalencastro" target="_blank" rel="noopener" class="links-contato">Linktree</a>
+                    <a href="https://www.linkedin.com/in/isisalencastro/" target="_blank" rel="noopener noreferrer" class="links-contato">LinkedIn</a>
+                    <a href="https://github.com/isisalencastro" target="_blank" rel="noopener noreferrer" class="links-contato">GitHub</a>
+                    <a href="https://www.youtube.com/@IsisAlencastro" target="_blank" rel="noopener noreferrer" class="links-contato">YouTube</a>
+                    <a href="https://linktr.ee/isisalencastro" target="_blank" rel="noopener noreferrer" class="links-contato">Linktree</a>
                 </section>
 
                 <section class="redes">
                 <h4>Me escreva</h4>
-                <a href="https://wa.me/message/GGEAJPHMSN6MD1" target="_blank" rel="noopener" class="links-contato">WhatsApp</a>
+                <a href="https://wa.me/message/GGEAJPHMSN6MD1" target="_blank" rel="noopener noreferrer" class="links-contato">WhatsApp</a>
                 </section>
             </div>
 
@@ -287,9 +344,9 @@
             </div>
         </footer>
 
-        <button id="btn-topo" onclick="voltarAoTopo()"><img src="./assets/images/icons/arrow-up-svgrepo-com.svg" alt="seta apontando para cima"></button>
+        <button type="button" id="btn-topo" aria-label="Voltar ao topo da página"><img src="./assets/images/icons/arrow-up-svgrepo-com.svg" alt="" width="24" height="24" /></button>
     </body>
-    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/script.js" defer></script>
 </html>
 
 

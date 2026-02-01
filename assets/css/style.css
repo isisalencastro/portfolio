@@ -1,21 +1,47 @@
 @charset "UTF-8";
 
 /* ==== RESET & BASE ==== */
-* {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Courier New', Courier, monospace;
+}
+
+*:focus {
+    outline: none;
+}
+
+*:focus-visible {
+    outline: 2px solid var(--primary-color, #185cb6);
+    outline-offset: 3px;
+}
+
+html {
     scroll-behavior: smooth;
 }
 
 :root {
-    --primary-color: #185cb6;
-    --secondary-color: #0f3d7a;
-    --background-color: #ffffff;
-    --text-color: #000000;
-    --accent-color: #f39c12;
-    --bg-footer: #0f3d7a98;
+    --font-main: 'Outfit', 'Segoe UI', system-ui, sans-serif;
+    --primary-color: #2563eb;
+    --primary-hover: #1d4ed8;
+    --secondary-color: #1e40af;
+    --background-color: #fafbfc;
+    --text-color: #1e293b;
+    --text-muted: #64748b;
+    --accent-color: #f59e0b;
+    --bg-footer: #1e3a5f;
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 10px 28px rgba(0, 0, 0, 0.12);
+    --radius: 12px;
+    --radius-lg: 20px;
+    --transition: 0.25s ease;
+}
+
+body {
+    font-family: var(--font-main);
 }
 
 html, body {
@@ -40,14 +66,16 @@ html, body {
     transition: opacity 0.3s ease;   
 }
 
-.modal{
+.modal {
     background-color: var(--background-color);
     color: var(--text-color);
-    padding: 64px;
-    border-radius: 32px;
-    font-size: 20px;
-    border: 4px var(--primary-color) solid;
-    box-shadow: 5px 10px 15px 0px rgba(0,0,0,0.3);
+    padding: 48px 56px;
+    border-radius: var(--radius-lg);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    border: 2px solid var(--primary-color);
+    box-shadow: var(--shadow-lg);
+    max-width: 90vw;
 }
 
 .modal h4{
@@ -63,47 +91,62 @@ html, body {
     
 }
 
-.botoes-modal button{
+.botoes-modal button,
+.botoes-modal .btn-modal-link {
     background-color: var(--primary-color);
     border: none;
     font-size: 14px;
-    padding: 12px;
+    padding: 12px 20px;
     margin: 12px;
     color: var(--background-color);
     font-weight: bold;
     text-transform: uppercase;
-    border-radius: 4px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color var(--transition), transform var(--transition);
 }
 
-.botoes-modal a{
+.botoes-modal .btn-modal-link {
     text-decoration: none;
+    display: inline-block;
+}
+
+.botoes-modal .btn-modal-link:hover {
+    background-color: var(--primary-hover, var(--secondary-color));
+    transform: translateY(-2px);
     color: var(--background-color);
 }
 
-.botoes-modal button:hover{
-    background-color: var(--secondary-color);
+.botoes-modal button:hover {
+    background-color: var(--primary-hover, var(--secondary-color));
     transform: translateY(-2px);
 }
 
-.botoes-modal button:first-child:hover{
-    background-color: var(--secondary-color);
-    transform: translateY(-2px);
-}
-
-.botoes-modal button:last-child{
+.botoes-modal button.close {
     background-color: var(--background-color);
-    border: 2px var(--primary-color) solid;
+    border: 2px solid var(--primary-color);
     color: var(--text-color);
+}
+
+.botoes-modal button.close:hover {
+    background-color: var(--text-color);
+    color: var(--background-color);
+    border-color: var(--text-color);
 }
 
 /*------------- MODO ESCURO -----------------*/
 .darkmode {
-    --background-color: #272727;
-    --text-color: #e0e0e0;
-    --primary-color: #1e90ff;
-    --secondary-color: #104e8b;
-    --accent-color: #ffa500;
-    --bg-footer: #104d8bda;
+    --background-color: #0f172a;
+    --text-color: #e2e8f0;
+    --text-muted: #94a3b8;
+    --primary-color: #3b82f6;
+    --primary-hover: #60a5fa;
+    --secondary-color: #1e40af;
+    --accent-color: #fbbf24;
+    --bg-footer: #0f172a;
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.2);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 10px 28px rgba(0, 0, 0, 0.4);
 }
 
 #dark-mode-toggle{
@@ -157,8 +200,9 @@ header {
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-header h2 {
-    font-size: 32px;
+header h2,
+header .logo {
+    font-size: 1.75rem;
     color: var(--text-color);
     text-transform: uppercase;
     font-weight: 800;
@@ -167,7 +211,17 @@ header h2 {
     cursor: pointer;
 }
 
-header h2:hover {
+header h2 a,
+header .logo a {
+    color: inherit;
+    text-decoration: none;
+    transition: color var(--transition);
+}
+
+header h2:hover,
+header .logo:hover,
+header h2 a:hover,
+header .logo a:hover {
     color: var(--primary-color);
 }
 
@@ -224,6 +278,7 @@ header nav a:hover::after {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background: linear-gradient(180deg, var(--background-color) 0%, rgba(37, 99, 235, 0.04) 100%);
     background-color: var(--background-color);
 }
 
@@ -306,26 +361,25 @@ header nav a:hover::after {
 }
 
 #texto-apresentacao a:hover {
-    background-color: var(--secondary-color);
+    background-color: var(--primary-hover, var(--secondary-color));
     transform: translateY(-2px);
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+    box-shadow: var(--shadow-lg);
 }
 
 /* ----------------- STACK STYLES -----------------*/
 
 #stacks {
-  padding: 40px 20px;
-  text-align: center;
-  background-color: var(--background-color);
-  border-radius: 12px;
-  margin: 60px auto;
-  max-width: 1200px;
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 40px 20px;
+    text-align: center;
+    background-color: var(--background-color);
+    border-radius: var(--radius);
+    margin: 60px auto;
+    max-width: 1200px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    box-shadow: var(--shadow-md);
+    border: 1px solid rgba(37, 99, 235, 0.1);
 }
 
 #icones-stacks {
@@ -416,14 +470,14 @@ header nav a:hover::after {
     gap: 24px;
     justify-content: center;
     padding: 40px 56px;
-    border-radius: 20px;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
     border: 2px solid var(--primary-color);
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    transition: box-shadow var(--transition), transform var(--transition);
 }
 
 #sobre-mim:hover {
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+    box-shadow: var(--shadow-lg);
     transform: translateY(-4px);
 }
 
@@ -538,24 +592,26 @@ header nav a:hover::after {
     scrollbar-width: none;
 }
 .servico {
-    flex: 0 0 calc(33.333% - 21px); 
+    flex: 0 0 calc(33.333% - 21px);
     background: var(--background-color);
-    border-radius: 12px;
-    padding: 24px;
+    border-radius: var(--radius);
+    padding: 28px 24px;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 16px;
-    transition: transform 0.3s ease;
+    transition: transform var(--transition), box-shadow var(--transition);
     border: 2px solid var(--primary-color);
     min-height: 520px;
     margin: 12px 0;
+    box-shadow: var(--shadow-sm);
 }
 
 .servico:hover {
     transform: translateY(-6px);
+    box-shadow: var(--shadow-md);
 }
 
 .servico img {
@@ -667,10 +723,10 @@ header nav a:hover::after {
     max-width: 1000px;
     width: 100%;
     background: var(--background-color);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-md);
     margin: 16px 0;
-    border-radius: 12px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: var(--radius);
+    transition: transform var(--transition), box-shadow var(--transition);
     padding: 28px;
     display: flex;
     align-items: flex-start;
@@ -680,7 +736,7 @@ header nav a:hover::after {
 
 .projeto:hover {
     transform: translateY(-6px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--shadow-lg);
 }
 
 .projeto img {
@@ -704,12 +760,33 @@ header nav a:hover::after {
     flex: 1;
 }
 
+.infos-projeto h3,
 .infos-projeto h4 {
-    font-size: 26px;
+    font-size: 1.4rem;
     text-transform: uppercase;
     letter-spacing: 1.5px;
     font-weight: 700;
     color: var(--secondary-color);
+}
+
+.titulo-secao {
+    font-size: 2.25rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 800;
+    color: var(--primary-color);
+}
+
+.titulo-secao::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: var(--primary-color);
+    margin: 12px auto 0;
+    border-radius: 2px;
 }
 
 .infos-projeto p {
@@ -769,8 +846,7 @@ header nav a:hover::after {
     gap: 60px;
     min-height: 80vh;
     background-color: var(--bg-footer);
-;
-    color: white;
+    color: #fff;
 }
 
 #titulos-contato{
@@ -904,24 +980,26 @@ header nav a:hover::after {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    padding: 24px;
-    background-color: #185cb6;
+    padding: 14px;
+    background-color: var(--primary-color);
     color: #fff;
     border: none;
-    border-radius: 100px;
+    border-radius: 50%;
     cursor: pointer;
-    display: none; /* inicia invisível */
+    display: none;
     font-weight: 600;
-    text-transform: uppercase;
     z-index: 1000;
-    transition: background-color 0.3s;
+    transition: background-color var(--transition), transform var(--transition);
+}
+
+#btn-topo:hover {
+    background-color: var(--primary-hover, var(--secondary-color));
+    transform: translateY(-2px);
 }
 
 #btn-topo img {
     width: 24px;
-}
-
-#btn-topo:hover {
-    background-color: #0f3d7a;
+    height: 24px;
+    display: block;
 }
 
