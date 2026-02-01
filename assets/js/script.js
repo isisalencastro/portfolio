@@ -7,7 +7,7 @@ const btnTopo = document.getElementById('btn-topo');
 if (btnTopo) {
     btnTopo.addEventListener('click', voltarAoTopo);
     window.addEventListener('scroll', () => {
-        btnTopo.style.display = window.scrollY > 300 ? 'block' : 'none';
+        btnTopo.style.display = window.scrollY > 300 ? 'flex' : 'none';
     });
 }
 
@@ -27,10 +27,8 @@ if (listaServicos && prevBtn && nextBtn) {
     prevBtn.addEventListener('click', () => {
         const card = listaServicos.querySelector('.servico');
         const cardWidth = card ? card.offsetWidth + 32 : 0;
-        if (scrollAmount > 0) {
-            scrollAmount -= cardWidth;
-            listaServicos.scrollTo({ left: scrollAmount, behavior: 'smooth' });
-        }
+        scrollAmount = Math.max(0, scrollAmount - cardWidth);
+        listaServicos.scrollTo({ left: scrollAmount, behavior: 'smooth' });
     });
 }
 
@@ -55,15 +53,31 @@ if (themeSwitch) {
 const menuToggle = document.getElementById('menu-toggle');
 const mobileMenu = document.getElementById('mobile-menu');
 if (menuToggle && mobileMenu) {
+    function openMenu() {
+        menuToggle.classList.add('active');
+        mobileMenu.classList.add('active');
+        mobileMenu.setAttribute('aria-hidden', 'false');
+        menuToggle.setAttribute('aria-expanded', 'true');
+        menuToggle.setAttribute('aria-label', 'Fechar menu');
+        document.body.style.overflow = 'hidden';
+    }
+    function closeMenu() {
+        menuToggle.classList.remove('active');
+        mobileMenu.classList.remove('active');
+        mobileMenu.setAttribute('aria-hidden', 'true');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.setAttribute('aria-label', 'Abrir menu');
+        document.body.style.overflow = '';
+    }
     menuToggle.addEventListener('click', () => {
-        menuToggle.classList.toggle('active');
-        mobileMenu.classList.toggle('active');
+        if (mobileMenu.classList.contains('active')) closeMenu();
+        else openMenu();
     });
     mobileMenu.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            menuToggle.classList.remove('active');
-            mobileMenu.classList.remove('active');
-        });
+        link.addEventListener('click', closeMenu);
+    });
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && mobileMenu.classList.contains('active')) closeMenu();
     });
 }
 

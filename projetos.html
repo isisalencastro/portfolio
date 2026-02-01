@@ -2,7 +2,7 @@
 <html lang="pt-BR">
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
         <meta name="description" content="Todos os projetos de Isis Beatriz de Alencastro: Prompt Manager, Portfólio, Vivi Delfino Psicanalista. Desenvolvimento web, HTML, CSS e JavaScript." />
         <meta name="keywords" content="projetos, Isis Alencastro, desenvolvimento web, portfólio, RocketSeat, NLW" />
         <meta name="author" content="Isis Beatriz de Alencastro" />
@@ -31,7 +31,7 @@
         <meta name="color-scheme" content="light dark" />
         <title>Projetos | Isis Alencastro — Portfólio</title>
     </head>
-    <body>
+    <body class="pagina-projetos">
         <header>
             <h2 class="logo"><a href="./index.html">IBA</a></h2>
             <nav aria-label="Menu principal">
@@ -45,6 +45,18 @@
                     <img src="./assets/images/icons/sun.svg" alt="" width="24" height="24" />
                 </button>
             </nav>
+            <button type="button" id="menu-toggle" class="menu-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div id="mobile-menu" class="mobile-menu" role="dialog" aria-label="Menu de navegação" aria-hidden="true">
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./index.html#projetos">Projetos</a></li>
+                    <li><a href="./index.html#contato">Contato</a></li>
+                </ul>
+            </div>
         </header>
 
         <main>
@@ -118,7 +130,7 @@
             </div>
 
             <div id="copy">
-                <p>&copy; 2025 - Todos os direitos reservados. | Design e código por Isis Alencastro.</p>
+                <p>&copy; 2026 - Todos os direitos reservados. | Design e código por Isis Alencastro.</p>
             </div>
         </footer>
 

@@ -38,18 +38,52 @@ html {
     --radius: 12px;
     --radius-lg: 20px;
     --transition: 0.25s ease;
+    /* Touch target mínimo (acessibilidade) */
+    --touch-target: 44px;
+    /* Safe area para dispositivos com notch */
+    --safe-top: env(safe-area-inset-top, 0);
+    --safe-right: env(safe-area-inset-right, 0);
+    --safe-bottom: env(safe-area-inset-bottom, 0);
+    --safe-left: env(safe-area-inset-left, 0);
 }
 
 body {
     font-family: var(--font-main);
 }
 
-html, body {
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
     width: 100%;
-    height: 100%;
+    min-height: 100%;
     background-color: var(--background-color);
     color: var(--text-color);
     line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Imagens responsivas por padrão (não estouram o container) */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+img[width][height] {
+    height: auto;
+}
+
+/* Exceção: ícones com tamanho fixo mantêm dimensões */
+header img,
+#dark-mode-toggle img,
+#btn-topo img,
+.stack-item img,
+#redes-sociais img,
+.servico img,
+#carrossel-servicos button img {
+    max-width: none;
 }
 
 /*------------- EXPLICAÇÃO SERVIÇOS ---------------*/
@@ -75,7 +109,10 @@ html, body {
     line-height: 1.7;
     border: 2px solid var(--primary-color);
     box-shadow: var(--shadow-lg);
-    max-width: 90vw;
+    max-width: min(90vw, 560px);
+    max-height: 85vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .modal h4{
@@ -84,11 +121,12 @@ html, body {
     color: var(--primary-color);
 }
 
-.botoes-modal{
+.botoes-modal {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
-    
+    flex-wrap: wrap;
+    gap: 0.5rem;
 }
 
 .botoes-modal button,
@@ -187,6 +225,9 @@ html, body {
 /* ---------------- HEADER STYLES --------------- */
 header {
     padding: 12px 24px;
+    padding-top: max(12px, var(--safe-top));
+    padding-left: max(24px, var(--safe-left));
+    padding-right: max(24px, var(--safe-right));
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -194,8 +235,8 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%; 
-    z-index: 1000; 
+    width: 100%;
+    z-index: 1000;
     background-color: var(--background-color);
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
@@ -292,11 +333,22 @@ header nav a:hover::after {
     gap: 60px;
     min-height: 86vh;
     padding: 0 20px;
+    width: 100%;
+    min-width: 0;
+}
+
+#apresentacao figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
 }
 
 #foto-notion {
-    max-width: 480px;
-    border-radius: 12px;
+    max-width: min(480px, 100%);
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius);
     transition: transform 0.4s ease, rotate 0.4s ease, box-shadow 0.3s ease;
 }
 
@@ -307,24 +359,45 @@ header nav a:hover::after {
 }
 
 #texto-apresentacao {
-    max-width: 630px;
+    max-width: min(630px, 100%);
+    width: 100%;
+    min-width: 0;
     text-align: left;
     font-size: 22px;
-    line-height: 1.2;
+    line-height: 1.4;
     font-weight: 500;
     color: var(--text-color);
 }
 
-#texto-apresentacao p {
-    display: inline-block;
-    margin-bottom: 12px;
+.texto-apresentacao-inner {
+    display: block;
 }
 
+#texto-apresentacao p,
 #texto-apresentacao h1 {
+    margin-bottom: 0.35em;
+}
+
+#texto-apresentacao p {
+    display: block;
+}
+
+/* Linha 1: Me chamo Isis Beatriz de Alencastro — só o nome em negrito */
+#texto-apresentacao .linha-nome {
     font-size: 28px;
-    display: inline-block;
+    display: block;
+    font-weight: 400;
+    margin-bottom: 0.25em;
+    line-height: 1.2;
+}
+
+#texto-apresentacao .linha-nome strong {
     font-weight: 700;
-    margin-bottom: 12px;
+}
+
+/* Linha 2: E sou [Stack] */
+#texto-apresentacao .linha-typing {
+    white-space: nowrap;
 }
 
 #texto-apresentacao #ola-principal {
@@ -333,12 +406,12 @@ header nav a:hover::after {
     letter-spacing: 4px;
     font-weight: 800;
     display: block;
-    margin-bottom: 6px;
+    margin-bottom: 0.2em;
     color: var(--primary-color);
 }
 
 #auto-typing {
-    border-right: 2px solid var(--primary-color); /* cursor piscante */
+    border-right: 2px solid var(--primary-color);
     white-space: nowrap;
     overflow: hidden;
 }
@@ -515,9 +588,26 @@ header nav a:hover::after {
     gap: 20px;
 }
 
+/* Redes sociais: sempre em uma única linha, sem coluna */
+#redes-sociais {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 12px;
+}
+
+#redes-sociais a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
 #redes-sociais img {
     width: 34px;
-    margin: 0 6px;
+    height: 34px;
+    margin: 0;
     transition: transform 0.3s ease, filter 0.3s ease;
     filter: grayscale(40%);
 }
@@ -584,15 +674,23 @@ header nav a:hover::after {
 #lista-servicos {
     display: flex;
     gap: 32px;
-    overflow: hidden;
     overflow-x: auto;
+    overflow-y: hidden;
     padding: 16px 0;
     width: 100%;
+    min-width: 0;
     scroll-behavior: smooth;
     scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x proximity;
+}
+
+#lista-servicos::-webkit-scrollbar {
+    display: none;
 }
 .servico {
     flex: 0 0 calc(33.333% - 21px);
+    min-width: min(320px, 100%);
     background: var(--background-color);
     border-radius: var(--radius);
     padding: 28px 24px;
@@ -604,9 +702,10 @@ header nav a:hover::after {
     gap: 16px;
     transition: transform var(--transition), box-shadow var(--transition);
     border: 2px solid var(--primary-color);
-    min-height: 520px;
+    min-height: 480px;
     margin: 12px 0;
     box-shadow: var(--shadow-sm);
+    scroll-snap-align: start;
 }
 
 .servico:hover {
@@ -720,8 +819,9 @@ header nav a:hover::after {
 }
 
 .projeto {
-    max-width: 1000px;
+    max-width: min(1000px, 100%);
     width: 100%;
+    min-width: 0;
     background: var(--background-color);
     box-shadow: var(--shadow-md);
     margin: 16px 0;
@@ -758,6 +858,7 @@ header nav a:hover::after {
     justify-content: center;
     gap: 16px;
     flex: 1;
+    min-width: 0;
 }
 
 .infos-projeto h3,
@@ -978,17 +1079,21 @@ header nav a:hover::after {
 
 #btn-topo {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
+    bottom: max(20px, var(--safe-bottom));
+    right: max(20px, var(--safe-right));
     padding: 14px;
+    min-width: var(--touch-target);
+    min-height: var(--touch-target);
     background-color: var(--primary-color);
     color: #fff;
     border: none;
     border-radius: 50%;
     cursor: pointer;
     display: none;
+    align-items: center;
+    justify-content: center;
     font-weight: 600;
-    z-index: 1000;
+    z-index: 999;
     transition: background-color var(--transition), transform var(--transition);
 }
 
