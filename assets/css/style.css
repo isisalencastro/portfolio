@@ -861,6 +861,7 @@ header nav a:hover::after {
     min-width: 0;
 }
 
+#projetos .infos-projeto h3,
 .infos-projeto h3,
 .infos-projeto h4 {
     font-size: 1.4rem;

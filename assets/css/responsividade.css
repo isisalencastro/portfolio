@@ -470,6 +470,7 @@
         gap: 1.25rem;
     }
 
+    #projetos .infos-projeto h3,
     .infos-projeto h3,
     .infos-projeto h4 {
         font-size: 1.15rem;
