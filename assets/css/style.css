@@ -799,6 +799,14 @@ header nav a:hover::after {
     background-color: var(--background-color);
 }
 
+#lista-projetos {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #projetos h3 {
     font-size: 42px;
     text-transform: uppercase;
@@ -821,12 +829,12 @@ header nav a:hover::after {
 }
 
 .projeto {
-    max-width: min(1000px, 100%);
+    max-width: 100%;
     width: 100%;
     min-width: 0;
     background: var(--background-color);
     box-shadow: var(--shadow-md);
-    margin: 16px 0;
+    margin: 16px auto;
     border-radius: var(--radius);
     transition: transform var(--transition), box-shadow var(--transition);
     padding: 28px;
