@@ -482,6 +482,8 @@ header nav a:hover::after {
   cursor: pointer;
 }
 
+
+
 /* Loop infinito */
 @keyframes scroll {
   from {
