@@ -482,16 +482,7 @@ header nav a:hover::after {
   cursor: pointer;
 }
 
-.stack-item img.icone-claude {
-  filter: none;
-  background-color: #d77655;
-  border-radius: 12px;
-  padding: 4px;
-}
 
-.darkmode .stack-item img.icone-claude {
-  box-shadow: 0 0 0 1px rgba(252, 242, 238, 0.25);
-}
 
 /* Loop infinito */
 @keyframes scroll {
