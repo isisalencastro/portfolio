@@ -198,15 +198,16 @@
         letter-spacing: 2px;
     }
 
-    #texto-apresentacao .acoes-home {
-        flex-direction: column;
-    }
-
     #texto-apresentacao a.btn {
         width: 100%;
         text-align: center;
         padding: 1rem;
         min-height: var(--touch-target);
+    }
+
+    .btns-apresentacao {
+        flex-direction: column;
+        width: 100%;
     }
 }
 

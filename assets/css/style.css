@@ -456,6 +456,28 @@ header nav a:hover::after {
     color: var(--background-color);
 }
 
+.btns-apresentacao {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+}
+
+.btns-apresentacao a {
+    margin-top: 0;
+}
+
+#texto-apresentacao a.btn-outline {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+#texto-apresentacao a.btn-outline:hover {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+}
+
 /* ----------------- STACK STYLES -----------------*/
 
 #stacks {
