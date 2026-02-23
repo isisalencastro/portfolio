@@ -416,16 +416,22 @@ header nav a:hover::after {
     overflow: hidden;
 }
 
-#texto-apresentacao a {
+#texto-apresentacao .acoes-home {
     margin-top: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+#texto-apresentacao a {
     padding: 14px 28px;
     font-size: 18px;
     background-color: var(--primary-color);
-    border: none;
+    border: 2px solid transparent;
     border-radius: 6px;
     cursor: pointer;
     display: inline-block;
-    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease, color 0.3s ease;
     text-decoration: none;
     font-weight: 600;
     text-transform: uppercase;
@@ -437,6 +443,17 @@ header nav a:hover::after {
     background-color: var(--primary-hover, var(--secondary-color));
     transform: translateY(-2px);
     box-shadow: var(--shadow-lg);
+}
+
+#texto-apresentacao .btn-contraste {
+    background-color: transparent;
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+#texto-apresentacao .btn-contraste:hover {
+    background-color: var(--primary-color);
+    color: var(--background-color);
 }
 
 .btns-apresentacao {
