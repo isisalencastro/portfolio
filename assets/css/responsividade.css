@@ -198,6 +198,10 @@
         letter-spacing: 2px;
     }
 
+    #texto-apresentacao .acoes-home {
+        flex-direction: column;
+    }
+
     #texto-apresentacao a.btn {
         width: 100%;
         text-align: center;
