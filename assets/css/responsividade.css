@@ -204,6 +204,11 @@
         padding: 1rem;
         min-height: var(--touch-target);
     }
+
+    .btns-apresentacao {
+        flex-direction: column;
+        width: 100%;
+    }
 }
 
 @media (max-width: 380px) {
