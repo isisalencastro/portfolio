@@ -534,7 +534,7 @@ header nav a:hover::after {
 }
 
 /* pausa no hover */
-#stackss:hover #icones-stack{
+#stacks:hover #icones-stacks{
   animation-play-state: paused;
 }
 
