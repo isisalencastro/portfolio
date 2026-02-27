@@ -533,11 +533,6 @@ header nav a:hover::after {
   }
 }
 
-/* pausa no hover */
-#stacks:hover #icones-stacks{
-  animation-play-state: paused;
-}
-
 
 /* ----------------- SOBRE MIM STYLES ----------------- */
 
