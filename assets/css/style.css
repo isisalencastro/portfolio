@@ -986,6 +986,29 @@ header nav a:hover::after {
     transform: translateY(-2px);
 }
 
+#btn-voltar-home {
+    display: block;
+    width: fit-content;
+    margin: 40px auto 0;
+    padding: 14px 32px;
+    font-size: 18px;
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#btn-voltar-home:hover {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    transform: translateY(-2px);
+}
+
 /*---------------------- CONTATO STYLES ---------------------------*/
 
 #contato {
