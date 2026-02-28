@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="80" fill="#1C1C1C"/>
+  <!-- Isometric cube - top face -->
+  <polygon points="256,76 412,168 256,260 100,168" fill="#4D4D4D"/>
+  <!-- Isometric cube - left face -->
+  <polygon points="100,168 256,260 256,436 100,344" fill="#2D2D2D"/>
+  <!-- Isometric cube - right face -->
+  <polygon points="256,260 412,168 412,344 256,436" fill="#3B3B3B"/>
+  <!-- 3D Cursor arrow - white front face -->
+  <polygon points="208,138 352,248 252,282" fill="#FFFFFF"/>
+  <!-- 3D Cursor arrow - left depth face -->
+  <polygon points="208,138 252,282 216,380" fill="#AAAAAA"/>
+  <!-- 3D Cursor arrow - right depth face -->
+  <polygon points="252,282 352,248 312,372" fill="#666666"/>
+</svg>
