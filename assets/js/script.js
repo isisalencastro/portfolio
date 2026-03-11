@@ -83,7 +83,7 @@ if (menuToggle && mobileMenu) {
 
 // ------------------------ AUTOTYPING AREAS DE TRABALHO ---------------------------------
 const texts = [
-    "Desenvolvedora Full-Stack",
+    "Desenvolvedora de Software",
     "Gestora de Automações",
     "Analista de Marketing Digital"
 ];
