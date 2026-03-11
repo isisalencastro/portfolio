@@ -24,7 +24,7 @@ O layout usa tema claro/escuro (persistido no `localStorage`), menu hambúrguer 
 |--------|------------|
 | **Modo escuro** | Alternância entre tema claro e escuro; preferência salva no navegador |
 | **Menu responsivo** | Menu hambúrguer em telas pequenas com animação |
-| **Auto-typing** | Texto animado na hero com as funções: Desenvolvedora Full-Stack, Gestora de Automações, Analista de Marketing Digital |
+| **Auto-typing** | Texto animado na hero com as funções: Desenvolvedora de Software, Gestora de Automações, Analista de Marketing Digital |
 | **Carrossel de serviços** | Navegação (anterior/próximo) entre os cards de serviços |
 | **Modais** | Detalhes de cada serviço em janela modal com opção de contato via WhatsApp |
 | **Botão “Voltar ao topo”** | Exibido após rolar a página; scroll suave ao clicar |
