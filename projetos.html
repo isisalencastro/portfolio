@@ -61,44 +61,88 @@
         <main>
         <section id="projetos" aria-labelledby="projetos-titulo">
             <h2 id="projetos-titulo" class="titulo-secao">Todos os Projetos</h2>
-            <div id="lista-projetos">
-                <article class="projeto" itemscope itemtype="https://schema.org/CreativeWork">
-                    <img src="./assets/images/capas-projetos/capa-proj-prompt.png" alt="Capa do projeto Prompt Manager da RocketSeat" width="300" height="200" loading="lazy" />
-                    <div class="infos-projeto">
-                        <h3>Prompt Manager</h3>
-                        <p>Aplicação single-page para criação, edição, busca e exclusão de prompts com persistência via localStorage. Possui sidebar com navegação por lista, campo de busca com filtro em tempo real e botão de copiar conteúdo. Desenvolvido com HTML, CSS e JavaScript puro, fonte Inter e layout responsivo com sidebar colapsável.</p>
-                        <p>Desenvolvido em 2025.</p>
-                        <a href="https://isisalencastro.github.io/promptmanager/" class="btn-projeto" target="_blank" rel="noopener noreferrer">Ver Projeto</a>
-                    </div>
-                </article>
-                <article class="projeto" itemscope itemtype="https://schema.org/CreativeWork">
-                    <img src="./assets/images/capas-projetos/capa-proj-isisalencastro.png" alt="Capa do projeto do Portfólio de Isis Alencastro" width="300" height="200" loading="lazy" />
-                    <div class="infos-projeto">
-                        <h3>Portfólio Isis Alencastro</h3>
-                        <p>Site estático multi-página com seções de apresentação, sobre, serviços (carrossel), projetos e contato. Inclui modo escuro, menu mobile hambúrguer, animação de digitação, marquee de stacks e dados estruturados (Schema.org). Desenvolvido com HTML, CSS e JavaScript vanilla, fonte Outfit e layout responsivo.</p>
-                        <p>Desenvolvido em 2025.</p>
-                        <a href="./index.html" class="btn-projeto">Ver Projeto</a>
-                    </div>
-                </article>
-                <article class="projeto" itemscope itemtype="https://schema.org/CreativeWork">
-                    <img src="./assets/images/capas-projetos/capa-proj-gametools" alt="Capa do projeto IBA GameTools" width="300" height="200" loading="lazy" />
-                    <div class="infos-projeto">
-                        <h3>IBA GameTools</h3>
-                        <p>Aplicação web com mini-games (Teste de Reação, Quiz Rápido, Clique Rápido) e ferramentas utilitárias (Calculadora de IMC, Conversor de Moedas, Pomodoro). Desenvolvido com HTML, CSS e JavaScript vanilla, com alternância de tema claro/escuro e layout responsivo.</p>
-                        <p>Desenvolvido em 2026.</p>
-                        <a href="https://isisalencastro.github.io/gametools/" class="btn-projeto" target="_blank" rel="noopener noreferrer">Ver Projeto</a>
-                    </div>
-                </article>
-                <article class="projeto" itemscope itemtype="https://schema.org/CreativeWork">
-                    <img src="./assets/images/capas-projetos/capa-proj-centralinks" alt="Capa do projeto Centra Links" width="300" height="200" loading="lazy" />
-                    <div class="infos-projeto">
-                        <h3>Centra Links</h3>
-                        <p>Página link-in-bio single-page com renderização dinâmica de links a partir de arquivo de configuração JavaScript. Possui animação de boas-vindas, revelação de cards em cascata, ícones Font Awesome e formas decorativas de fundo. Desenvolvido com HTML, Tailwind CSS e JavaScript vanilla, fontes Poppins e Inter.</p>
-                        <p>Desenvolvido em 2026.</p>
-                        <a href="https://isisalencastro.github.io/centralinks/" class="btn-projeto" target="_blank" rel="noopener noreferrer">Ver Projeto</a>
-                    </div>
-                </article>
+
+            <nav class="tabs-nav" aria-label="Categorias de projetos" role="tablist">
+                <button class="tab-btn active" data-tab="desenvolvimento" role="tab" aria-selected="true" aria-controls="tab-desenvolvimento">Desenvolvimento</button>
+                <button class="tab-btn" data-tab="brandbooks" role="tab" aria-selected="false" aria-controls="tab-brandbooks">Brand Books</button>
+                <button class="tab-btn" data-tab="automacoes" role="tab" aria-selected="false" aria-controls="tab-automacoes">Automações</button>
+            </nav>
+
+            <div class="tab-content active" id="tab-desenvolvimento" role="tabpanel" aria-labelledby="tab-desenvolvimento">
+                <div id="lista-projetos">
+                    <article class="projeto" itemscope itemtype="https://schema.org/CreativeWork">
+                        <img src="./assets/images/capas-projetos/capa-proj-prompt.png" alt="Capa do projeto Prompt Manager da RocketSeat" width="300" height="200" loading="lazy" />
+                        <div class="infos-projeto">
+                            <h3>Prompt Manager</h3>
+                            <p>Aplicação single-page para criação, edição, busca e exclusão de prompts com persistência via localStorage. Possui sidebar com navegação por lista, campo de busca com filtro em tempo real e botão de copiar conteúdo. Desenvolvido com HTML, CSS e JavaScript puro, fonte Inter e layout responsivo com sidebar colapsável.</p>
+                            <p>Desenvolvido em 2025.</p>
+                            <a href="https://isisalencastro.github.io/promptmanager/" class="btn-projeto" target="_blank" rel="noopener noreferrer">Ver Projeto</a>
+                        </div>
+                    </article>
+                    <article class="projeto" itemscope itemtype="https://schema.org/CreativeWork">
+                        <img src="./assets/images/capas-projetos/capa-proj-isisalencastro.png" alt="Capa do projeto do Portfólio de Isis Alencastro" width="300" height="200" loading="lazy" />
+                        <div class="infos-projeto">
+                            <h3>Portfólio Isis Alencastro</h3>
+                            <p>Site estático multi-página com seções de apresentação, sobre, serviços (carrossel), projetos e contato. Inclui modo escuro, menu mobile hambúrguer, animação de digitação, marquee de stacks e dados estruturados (Schema.org). Desenvolvido com HTML, CSS e JavaScript vanilla, fonte Outfit e layout responsivo.</p>
+                            <p>Desenvolvido em 2025.</p>
+                            <a href="./index.html" class="btn-projeto">Ver Projeto</a>
+                        </div>
+                    </article>
+                    <article class="projeto" itemscope itemtype="https://schema.org/CreativeWork">
+                        <img src="./assets/images/capas-projetos/capa-proj-gametools" alt="Capa do projeto IBA GameTools" width="300" height="200" loading="lazy" />
+                        <div class="infos-projeto">
+                            <h3>IBA GameTools</h3>
+                            <p>Aplicação web com mini-games (Teste de Reação, Quiz Rápido, Clique Rápido) e ferramentas utilitárias (Calculadora de IMC, Conversor de Moedas, Pomodoro). Desenvolvido com HTML, CSS e JavaScript vanilla, com alternância de tema claro/escuro e layout responsivo.</p>
+                            <p>Desenvolvido em 2026.</p>
+                            <a href="https://isisalencastro.github.io/gametools/" class="btn-projeto" target="_blank" rel="noopener noreferrer">Ver Projeto</a>
+                        </div>
+                    </article>
+                    <article class="projeto" itemscope itemtype="https://schema.org/CreativeWork">
+                        <img src="./assets/images/capas-projetos/capa-proj-centralinks" alt="Capa do projeto Centra Links" width="300" height="200" loading="lazy" />
+                        <div class="infos-projeto">
+                            <h3>Centra Links</h3>
+                            <p>Página link-in-bio single-page com renderização dinâmica de links a partir de arquivo de configuração JavaScript. Possui animação de boas-vindas, revelação de cards em cascata, ícones Font Awesome e formas decorativas de fundo. Desenvolvido com HTML, Tailwind CSS e JavaScript vanilla, fontes Poppins e Inter.</p>
+                            <p>Desenvolvido em 2026.</p>
+                            <a href="https://isisalencastro.github.io/centralinks/" class="btn-projeto" target="_blank" rel="noopener noreferrer">Ver Projeto</a>
+                        </div>
+                    </article>
+                </div>
             </div>
+
+            <div class="tab-content" id="tab-brandbooks" role="tabpanel" aria-labelledby="tab-brandbooks">
+                <div class="lista-brandbooks">
+                    <article class="projeto-brandbook" itemscope itemtype="https://schema.org/CreativeWork">
+                        <div class="brandbook-imagem">
+                            <img src="./assets/images/capas-projetos/capa-proj-ibacompany.png" alt="Brand Book IBA Company" width="600" height="400" loading="lazy" />
+                        </div>
+                        <div class="brandbook-texto">
+                            <h3>IBA Company</h3>
+                            <p>Identidade visual completa desenvolvida para a IBA Company, incluindo logotipo, paleta de cores, tipografia e diretrizes de aplicação da marca. O projeto contempla versões do logo para fundos claros e escuros, definição de espaçamentos mínimos e usos incorretos a serem evitados.</p>
+                            <ul class="brandbook-destaques">
+                                <li><strong>Paleta:</strong> Azul corporativo, tons neutros e acentos vibrantes</li>
+                                <li><strong>Tipografia:</strong> Outfit (títulos) + Inter (corpo)</li>
+                                <li><strong>Aplicações:</strong> Papelaria, digital, redes sociais</li>
+                            </ul>
+                            <a href="#" class="btn-projeto" target="_blank" rel="noopener noreferrer">Ver Brand Book</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <div class="tab-content" id="tab-automacoes" role="tabpanel" aria-labelledby="tab-automacoes">
+                <div id="lista-projetos-automacoes" class="lista-projetos-tab">
+                    <article class="projeto" itemscope itemtype="https://schema.org/CreativeWork">
+                        <img src="./assets/images/capas-projetos/capa-proj-prompt.png" alt="Capa do projeto de automação" width="300" height="200" loading="lazy" />
+                        <div class="infos-projeto">
+                            <h3>Automação de Postagens</h3>
+                            <p>Fluxo automatizado para agendamento e publicação de conteúdo em múltiplas redes sociais. Integração com APIs do Instagram, LinkedIn e Twitter para publicação simultânea com textos, imagens e hashtags personalizadas por plataforma.</p>
+                            <p>Desenvolvido em 2026.</p>
+                            <a href="#" class="btn-projeto" target="_blank" rel="noopener noreferrer">Ver Projeto</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
             <a href="./index.html" id="btn-voltar-home">Voltar à Home</a>
         </section>
         </main>

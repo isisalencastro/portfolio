@@ -833,6 +833,190 @@ header nav a:hover::after {
     background-color: var(--background-color);
 }
 
+/* ---- TABS ---- */
+
+.tabs-nav {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.tab-btn {
+    padding: 12px 32px;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: var(--font-main);
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: background-color var(--transition), color var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+
+.tab-btn:hover {
+    background-color: rgba(37, 99, 235, 0.08);
+    transform: translateY(-2px);
+}
+
+.tab-btn.active {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    box-shadow: var(--shadow-md);
+}
+
+.tab-btn.active:hover {
+    background-color: var(--primary-hover);
+}
+
+.tab-content {
+    display: none;
+    width: 100%;
+    max-width: 1000px;
+    animation: fadeInTab 0.4s ease;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeInTab {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---- BRAND BOOK LAYOUT ---- */
+
+.lista-brandbooks {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.projeto-brandbook {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    background: var(--background-color);
+    border: 2px solid var(--primary-color);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.projeto-brandbook:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+}
+
+.brandbook-imagem {
+    flex: 1 1 50%;
+    min-height: 320px;
+    overflow: hidden;
+}
+
+.brandbook-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.brandbook-imagem img:hover {
+    transform: scale(1.04);
+}
+
+.brandbook-texto {
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    padding: 36px 40px;
+}
+
+.brandbook-texto h3 {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+.brandbook-texto p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--text-color);
+    text-align: justify;
+}
+
+.brandbook-destaques {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.brandbook-destaques li {
+    font-size: 15px;
+    color: var(--text-muted);
+    padding-left: 20px;
+    position: relative;
+    line-height: 1.5;
+}
+
+.brandbook-destaques li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+}
+
+.brandbook-destaques li strong {
+    color: var(--text-color);
+}
+
+.brandbook-texto .btn-projeto {
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--background-color);
+    background-color: var(--primary-color);
+    padding: 12px 28px;
+    border-radius: 6px;
+    width: fit-content;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+    margin-top: 8px;
+}
+
+.brandbook-texto .btn-projeto:hover {
+    background-color: var(--secondary-color);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    transform: translateY(-2px);
+}
+
+/* ---- LISTA PROJETOS (shared for dev & automações) ---- */
+
+.lista-projetos-tab {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #lista-projetos {
     width: 100%;
     max-width: 1000px;

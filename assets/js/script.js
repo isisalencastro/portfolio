@@ -161,6 +161,30 @@ window.addEventListener('click', (e) => {
     }
 });
 
+// --------------------------------- ABAS DE PROJETOS ------------------------------------
+const tabBtns = document.querySelectorAll('.tab-btn');
+const tabContents = document.querySelectorAll('.tab-content');
+if (tabBtns.length && tabContents.length) {
+    tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const target = btn.getAttribute('data-tab');
+
+            tabBtns.forEach(b => {
+                b.classList.remove('active');
+                b.setAttribute('aria-selected', 'false');
+            });
+            btn.classList.add('active');
+            btn.setAttribute('aria-selected', 'true');
+
+            tabContents.forEach(content => {
+                content.classList.remove('active');
+            });
+            const panel = document.getElementById('tab-' + target);
+            if (panel) panel.classList.add('active');
+        });
+    });
+}
+
 // --------------------------------- BOTÃO COPIA EMAIL ------------------------------------
 const btnEmail = document.getElementById('btn-email');
 const emailEl = document.getElementById('email');
