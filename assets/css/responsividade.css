@@ -464,11 +464,14 @@
     }
 
     .brandbook-imagem {
+        flex: 0 0 auto;
+        max-width: 100%;
         min-height: 240px;
     }
 
     .brandbook-texto {
-        padding: 1.75rem 1.5rem;
+        padding: 2rem 1.5rem;
+        gap: 20px;
     }
 }
 
@@ -525,7 +528,8 @@
     }
 
     .brandbook-texto {
-        padding: 1.25rem 1rem;
+        padding: 1.5rem 1.25rem;
+        gap: 16px;
     }
 
     .brandbook-texto h3 {

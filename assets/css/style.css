@@ -896,7 +896,7 @@ header nav a:hover::after {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 40px;
 }
 
 .projeto-brandbook {
@@ -917,8 +917,9 @@ header nav a:hover::after {
 }
 
 .brandbook-imagem {
-    flex: 1 1 50%;
-    min-height: 320px;
+    flex: 0 0 320px;
+    max-width: 320px;
+    min-height: 280px;
     overflow: hidden;
 }
 
@@ -934,12 +935,12 @@ header nav a:hover::after {
 }
 
 .brandbook-texto {
-    flex: 1 1 50%;
+    flex: 1 1 0%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 16px;
-    padding: 36px 40px;
+    gap: 24px;
+    padding: 40px 48px;
 }
 
 .brandbook-texto h3 {
@@ -948,11 +949,12 @@ header nav a:hover::after {
     letter-spacing: 1.5px;
     font-weight: 700;
     color: var(--secondary-color);
+    margin-bottom: 4px;
 }
 
 .brandbook-texto p {
     font-size: 17px;
-    line-height: 1.7;
+    line-height: 1.8;
     color: var(--text-color);
     text-align: justify;
 }
