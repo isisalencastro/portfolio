@@ -1007,6 +1007,19 @@ header nav a:hover::after {
     transform: translateY(-2px);
 }
 
+/* ---- TAB VAZIA ---- */
+
+.tab-vazia {
+    text-align: center;
+    font-size: 18px;
+    color: var(--text-muted);
+    font-weight: 500;
+    padding: 80px 20px;
+    border: 2px dashed var(--primary-color);
+    border-radius: var(--radius);
+    opacity: 0.7;
+}
+
 /* ---- LISTA PROJETOS (shared for dev & automações) ---- */
 
 .lista-projetos-tab {
