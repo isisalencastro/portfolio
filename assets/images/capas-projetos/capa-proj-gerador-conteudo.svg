@@ -31,7 +31,7 @@
     <text x="29" y="72" font-family="Arial,sans-serif" font-size="7.5" fill="#888" text-anchor="middle">Webhook</text>
   </g>
 
-  <!-- Connection line 1’2 -->
+  <!-- Connection line 1Â’2 -->
   <line x1="116.5" y1="89" x2="140" y2="89" stroke="#ccc" stroke-width="1.2"/>
 
   <!-- Node 2: Notion: Ideias existentes -->
@@ -46,7 +46,7 @@
     <text x="29" y="80" font-family="Arial,sans-serif" font-size="5.5" fill="#aaa" text-anchor="middle">get All: databasePage</text>
   </g>
 
-  <!-- Connection line 2’3 -->
+  <!-- Connection line 2Â’3 -->
   <line x1="204.5" y1="89" x2="228" y2="89" stroke="#ccc" stroke-width="1.2"/>
 
   <!-- Node 3: Preparar Prompt: YouTube -->
@@ -59,7 +59,7 @@
     <text x="29" y="80" font-family="Arial,sans-serif" font-size="6.5" fill="#888" text-anchor="middle">YouTube</text>
   </g>
 
-  <!-- Connection line 3’4 -->
+  <!-- Connection line 3Â’4 -->
   <line x1="292.5" y1="89" x2="316" y2="89" stroke="#ccc" stroke-width="1.2"/>
 
   <!-- Node 4: OpenAI: Gerar Ideias YouTube -->
@@ -79,7 +79,7 @@
     <text x="29" y="88" font-family="Arial,sans-serif" font-size="5" fill="#aaa" text-anchor="middle">POST https://api.openai.com...</text>
   </g>
 
-  <!-- Connection line 4’5 -->
+  <!-- Connection line 4Â’5 -->
   <line x1="380.5" y1="89" x2="404" y2="89" stroke="#ccc" stroke-width="1.2"/>
 
   <!-- Node 5: Separar Ideias -->
@@ -91,7 +91,7 @@
     <text x="29" y="72" font-family="Arial,sans-serif" font-size="7" fill="#888" text-anchor="middle">Separar Ideias</text>
   </g>
 
-  <!-- Connection line 5’6 -->
+  <!-- Connection line 5Â’6 -->
   <line x1="468.5" y1="89" x2="492" y2="89" stroke="#ccc" stroke-width="1.2"/>
 
   <!-- Node 6: Notion: Salvar Ideias YouTube -->
@@ -105,7 +105,7 @@
     <text x="29" y="88" font-family="Arial,sans-serif" font-size="5" fill="#aaa" text-anchor="middle">create: databasePage</text>
   </g>
 
-  <!-- ===== ROW 2: Roteirizador Automático ===== -->
+  <!-- ===== ROW 2: Roteirizador AutomÃ¡tico ===== -->
 
   <!-- Green plus badge for row 2 -->
   <circle cx="30" cy="230" r="8" fill="#e8f5e9" stroke="#4caf50" stroke-width="1.2"/>
@@ -123,7 +123,7 @@
     <text x="29" y="72" font-family="Arial,sans-serif" font-size="6.5" fill="#888" text-anchor="middle">Verificar aprovadas</text>
   </g>
 
-  <!-- Connection line 7’8 -->
+  <!-- Connection line 7Â’8 -->
   <line x1="116.5" y1="229" x2="140" y2="229" stroke="#ccc" stroke-width="1.2"/>
 
   <!-- Node 8: Preparar Query Notion -->
@@ -136,7 +136,7 @@
     <text x="29" y="80" font-family="Arial,sans-serif" font-size="6.5" fill="#888" text-anchor="middle">Notion</text>
   </g>
 
-  <!-- Connection line 8’9 -->
+  <!-- Connection line 8Â’9 -->
   <line x1="204.5" y1="229" x2="228" y2="229" stroke="#ccc" stroke-width="1.2"/>
 
   <!-- Node 9: Notion: Buscar Aprovadas -->
@@ -152,7 +152,7 @@
     <text x="29" y="80" font-family="Arial,sans-serif" font-size="6.5" fill="#888" text-anchor="middle">Aprovadas</text>
   </g>
 
-  <!-- Connection line 9’10 -->
+  <!-- Connection line 9Â’10 -->
   <line x1="292.5" y1="229" x2="316" y2="229" stroke="#ccc" stroke-width="1.2"/>
 
   <!-- Node 10: Tem Ideias Aprovadas? -->
@@ -165,7 +165,7 @@
     <text x="29" y="80" font-family="Arial,sans-serif" font-size="6.5" fill="#888" text-anchor="middle">Aprovadas?</text>
   </g>
 
-  <!-- Connection line 10’11 -->
+  <!-- Connection line 10Â’11 -->
   <line x1="380.5" y1="229" x2="404" y2="229" stroke="#ccc" stroke-width="1.2"/>
 
   <!-- Node 11: Preparar Prompt: Roteiro -->
@@ -178,7 +178,7 @@
     <text x="29" y="80" font-family="Arial,sans-serif" font-size="6.5" fill="#888" text-anchor="middle">Roteiro</text>
   </g>
 
-  <!-- Connection line 11’12 -->
+  <!-- Connection line 11Â’12 -->
   <line x1="468.5" y1="229" x2="492" y2="229" stroke="#ccc" stroke-width="1.2"/>
 
   <!-- Node 12: OpenAI: Gerar Roteiro -->
@@ -196,7 +196,7 @@
     <text x="29" y="80" font-family="Arial,sans-serif" font-size="5" fill="#aaa" text-anchor="middle">POST https://api.openai.com...</text>
   </g>
 
-  <!-- Connection line 12’13 -->
+  <!-- Connection line 12Â’13 -->
   <line x1="556.5" y1="229" x2="580" y2="229" stroke="#ccc" stroke-width="1.2"/>
 
   <!-- Node 13: Formatar Roteiro -->
@@ -208,7 +208,7 @@
     <text x="29" y="72" font-family="Arial,sans-serif" font-size="7" fill="#888" text-anchor="middle">Formatar Roteiro</text>
   </g>
 
-  <!-- Connection line 13’14 -->
+  <!-- Connection line 13Â’14 -->
   <line x1="644.5" y1="229" x2="654" y2="229" stroke="#ccc" stroke-width="1.2"/>
 
   <!-- Node 14: Notion: Atualizar com Roteiro (smaller, diamond-ish connector) -->
@@ -221,17 +221,17 @@
     <text x="19" y="57" font-family="Arial,sans-serif" font-size="5.5" fill="#e67e22" text-anchor="middle">com Roteiro</text>
   </g>
 
-  <!-- Connection line 14’15 -->
+  <!-- Connection line 14Â’15 -->
   <line x1="697" y1="229" x2="706" y2="229" stroke="#ccc" stroke-width="1.2"/>
 
-  <!-- Node 15: Notion: Adicionar Roteiro na Página -->
+  <!-- Node 15: Notion: Adicionar Roteiro na PÃ¡gina -->
   <g transform="translate(708,210)">
     <rect x="0" y="0" width="38" height="38" rx="8" fill="#fff" filter="url(#shadowSm)" stroke="#e0e0e0" stroke-width="0.5"/>
     <rect x="10" y="8" width="18" height="22" rx="2" fill="none" stroke="#333" stroke-width="1.3"/>
     <text x="19" y="23" font-family="Georgia,serif" font-size="11" fill="#333" text-anchor="middle" font-weight="700">N</text>
     <circle cx="0" cy="19" r="3" fill="#fff" stroke="#ccc" stroke-width="1"/>
     <text x="19" y="50" font-family="Arial,sans-serif" font-size="5.5" fill="#888" text-anchor="middle">Notion: Adicionar</text>
-    <text x="19" y="57" font-family="Arial,sans-serif" font-size="5.5" fill="#888" text-anchor="middle">Roteiro na Página</text>
+    <text x="19" y="57" font-family="Arial,sans-serif" font-size="5.5" fill="#888" text-anchor="middle">Roteiro na PÃ¡gina</text>
   </g>
 
 </svg>
