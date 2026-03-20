@@ -1084,6 +1084,9 @@ header nav a:hover::after {
 
 .projeto img {
     max-width: 300px;
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(24, 92, 182, 0.25);
     transition: transform 0.3s ease, box-shadow 0.3s ease;

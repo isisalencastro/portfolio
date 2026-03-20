@@ -165,24 +165,28 @@ window.addEventListener('click', (e) => {
 const tabBtns = document.querySelectorAll('.tab-btn');
 const tabContents = document.querySelectorAll('.tab-content');
 if (tabBtns.length && tabContents.length) {
-    tabBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const target = btn.getAttribute('data-tab');
-
-            tabBtns.forEach(b => {
-                b.classList.remove('active');
-                b.setAttribute('aria-selected', 'false');
-            });
-            btn.classList.add('active');
-            btn.setAttribute('aria-selected', 'true');
-
-            tabContents.forEach(content => {
-                content.classList.remove('active');
-            });
-            const panel = document.getElementById('tab-' + target);
-            if (panel) panel.classList.add('active');
+    function activateTab(tabName) {
+        tabBtns.forEach(b => {
+            b.classList.remove('active');
+            b.setAttribute('aria-selected', 'false');
         });
+        tabContents.forEach(c => c.classList.remove('active'));
+
+        const targetBtn = document.querySelector(`.tab-btn[data-tab="${tabName}"]`);
+        const targetPanel = document.getElementById('tab-' + tabName);
+        if (targetBtn && targetPanel) {
+            targetBtn.classList.add('active');
+            targetBtn.setAttribute('aria-selected', 'true');
+            targetPanel.classList.add('active');
+        }
+    }
+
+    tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => activateTab(btn.getAttribute('data-tab')));
     });
+
+    const hash = window.location.hash.substring(1);
+    if (hash) activateTab(hash);
 }
 
 // --------------------------------- BOTÃO COPIA EMAIL ------------------------------------
