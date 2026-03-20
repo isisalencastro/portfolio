@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#1e293b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3b82f6"/>
+      <stop offset="100%" style="stop-color:#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.15"/>
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:0.05"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="400" fill="url(#bg)" rx="12"/>
+
+  <circle cx="480" cy="80" r="120" fill="url(#glow)"/>
+  <circle cx="100" cy="340" r="90" fill="url(#glow)"/>
+
+  <!-- N8N node connections -->
+  <line x1="140" y1="170" x2="260" y2="130" stroke="#3b82f6" stroke-width="2" opacity="0.4"/>
+  <line x1="260" y1="130" x2="380" y2="170" stroke="#3b82f6" stroke-width="2" opacity="0.4"/>
+  <line x1="380" y1="170" x2="460" y2="130" stroke="#8b5cf6" stroke-width="2" opacity="0.4"/>
+
+  <!-- Node circles -->
+  <circle cx="140" cy="170" r="8" fill="#3b82f6" opacity="0.6"/>
+  <circle cx="260" cy="130" r="8" fill="#3b82f6" opacity="0.7"/>
+  <circle cx="380" cy="170" r="8" fill="#8b5cf6" opacity="0.7"/>
+  <circle cx="460" cy="130" r="8" fill="#8b5cf6" opacity="0.6"/>
+
+  <!-- Animated pulse dots -->
+  <circle cx="200" cy="150" r="4" fill="#60a5fa" opacity="0.5"/>
+  <circle cx="320" cy="150" r="4" fill="#a78bfa" opacity="0.5"/>
+  <circle cx="420" cy="150" r="4" fill="#a78bfa" opacity="0.5"/>
+
+  <!-- AI brain icon -->
+  <g transform="translate(265, 195)" opacity="0.9">
+    <circle cx="35" cy="35" r="32" fill="none" stroke="url(#accent)" stroke-width="2.5"/>
+    <path d="M20 30 Q25 15 35 18 Q45 15 50 30 Q55 35 50 42 Q48 50 35 52 Q22 50 20 42 Q15 35 20 30Z" fill="none" stroke="url(#accent)" stroke-width="1.5"/>
+    <circle cx="28" cy="32" r="2.5" fill="#60a5fa"/>
+    <circle cx="42" cy="32" r="2.5" fill="#a78bfa"/>
+    <circle cx="35" cy="42" r="2.5" fill="#818cf8"/>
+    <line x1="28" y1="32" x2="42" y2="32" stroke="#60a5fa" stroke-width="1" opacity="0.6"/>
+    <line x1="28" y1="32" x2="35" y2="42" stroke="#818cf8" stroke-width="1" opacity="0.6"/>
+    <line x1="42" y1="32" x2="35" y2="42" stroke="#a78bfa" stroke-width="1" opacity="0.6"/>
+  </g>
+
+  <!-- Title -->
+  <text x="300" y="295" font-family="system-ui, -apple-system, sans-serif" font-size="26" font-weight="700" fill="#f1f5f9" text-anchor="middle" letter-spacing="0.5">Gerador de Conteúdo AI</text>
+
+  <!-- Subtitle -->
+  <text x="300" y="325" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#94a3b8" text-anchor="middle" letter-spacing="1">N8N  ·  OpenAI GPT-4o  ·  Notion</text>
+
+  <!-- Bottom accent line -->
+  <rect x="200" y="345" width="200" height="3" rx="1.5" fill="url(#accent)" opacity="0.7"/>
+
+  <!-- Play button hint (YouTube) -->
+  <g transform="translate(530, 30)" opacity="0.3">
+    <rect x="0" y="0" width="40" height="28" rx="6" fill="#ef4444"/>
+    <polygon points="16,7 16,21 28,14" fill="#fff"/>
+  </g>
+
+  <!-- Document lines (script/roteiro hint) -->
+  <g transform="translate(30, 40)" opacity="0.25">
+    <rect x="0" y="0" width="50" height="65" rx="4" fill="none" stroke="#64748b" stroke-width="1.5"/>
+    <line x1="8" y1="15" x2="42" y2="15" stroke="#64748b" stroke-width="1.5"/>
+    <line x1="8" y1="25" x2="35" y2="25" stroke="#64748b" stroke-width="1.5"/>
+    <line x1="8" y1="35" x2="40" y2="35" stroke="#64748b" stroke-width="1.5"/>
+    <line x1="8" y1="45" x2="30" y2="45" stroke="#64748b" stroke-width="1.5"/>
+  </g>
+</svg>
