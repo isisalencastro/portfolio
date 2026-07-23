@@ -139,4 +139,3 @@ Design e código por **Isis Beatriz de Alencastro**.
 - **LinkedIn:** [linkedin.com/in/isisalencastro](https://www.linkedin.com/in/isisalencastro)  
 - **GitHub:** [github.com/isisalencastro](https://github.com/isisalencastro)  
 - **YouTube:** [@IsisAlencastro](https://www.youtube.com/@IsisAlencastro)  
-- **WhatsApp:** [Entrar em contato](https://wa.me/message/GGEAJPHMSN6MD1)
