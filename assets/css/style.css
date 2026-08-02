@@ -496,9 +496,11 @@ header nav a:hover::after {
 
 #icones-stacks {
   display: flex;
+  align-items: center;
   gap: 32px;
   animation: scroll 25s linear infinite;
-  width: max-content; 
+  width: max-content;
+  will-change: transform;
 }
 
 .stack-item {

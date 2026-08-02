@@ -32,6 +32,17 @@ if (listaServicos && prevBtn && nextBtn) {
     });
 }
 
+//------------------------- CARROSSEL DE STACKS -----------------------------------
+const stackContainer = document.getElementById('icones-stacks');
+if (stackContainer) {
+    const stackItems = Array.from(stackContainer.children);
+    if (stackItems.length) {
+        stackItems.forEach(item => {
+            stackContainer.appendChild(item.cloneNode(true));
+        });
+    }
+}
+
 //------------------------------- MODO ESCURO ----------------------------------------
 const themeSwitch = document.getElementById('dark-mode-toggle');
 if (themeSwitch) {
