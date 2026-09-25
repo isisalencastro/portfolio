@@ -382,7 +382,7 @@ header nav a:hover::after {
     display: block;
 }
 
-/* Linha 1: Me chamo Isis Beatriz de Alencastro — só o nome em negrito */
+/* Linha 1: Me chamo Isis Beatriz de Alencastro, so o nome em negrito */
 #texto-apresentacao .linha-nome {
     font-size: 28px;
     display: block;
@@ -414,6 +414,29 @@ header nav a:hover::after {
     border-right: 2px solid var(--primary-color);
     white-space: nowrap;
     overflow: hidden;
+    animation: piscarCursor 1s step-end infinite;
+}
+
+@keyframes piscarCursor {
+    0%, 49% { border-right-color: var(--primary-color); }
+    50%, 100% { border-right-color: transparent; }
+}
+
+/* Texto so para leitor de tela */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #auto-typing { animation: none; }
 }
 
 #texto-apresentacao .acoes-home {

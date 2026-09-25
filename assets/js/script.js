@@ -95,17 +95,20 @@ if (menuToggle && mobileMenu) {
 // ------------------------ AUTOTYPING AREAS DE TRABALHO ---------------------------------
 const texts = [
     "Desenvolvedora de Software",
-    "Gestora de Automações",
-    "Analista de Marketing Digital"
+    "AI Engineer",
+    "Criadora de Conteúdo"
 ];
 
 const typingElement = document.getElementById('auto-typing');
-if (typingElement) {
+if (typingElement && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    // Quem pediu menos movimento ve a primeira area fixa, sem animacao nenhuma.
+    typingElement.textContent = texts[0];
+} else if (typingElement) {
     let textIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
-    const typingSpeed = 100;
-    const pauseTime = 1500;
+    const typingSpeed = 90;
+    const pauseTime = 2000;
     function type() {
         const currentText = texts[textIndex];
         if (!isDeleting) {
