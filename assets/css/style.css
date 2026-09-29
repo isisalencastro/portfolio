@@ -1403,3 +1403,126 @@ header nav a:hover::after {
     display: block;
 }
 
+/* ================= MELHORIAS DE ANIMACAO (28/09/2026) ================= */
+/* Revelacao ao rolar, header ao rolar, botao de topo, carrossel de stacks
+   e respiro embaixo do header fixo. Quem pede menos movimento no sistema
+   recebe tudo desligado, no fim deste bloco. */
+
+/* Ancora nao fica escondida atras do header fixo */
+section[id],
+footer[id] {
+    scroll-margin-top: 84px;
+}
+
+/* Header ganha sombra e encolhe um pouco quando a pagina rola */
+header {
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease;
+}
+
+header.header-rolado {
+    box-shadow: var(--shadow-md);
+    padding-top: max(6px, var(--safe-top));
+    padding-bottom: 6px;
+}
+
+.logo {
+    transition: transform 0.3s ease;
+}
+
+header.header-rolado .logo {
+    transform: scale(0.92);
+}
+
+/* Entrada da home, uma peca depois da outra */
+@keyframes surgir {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: none; }
+}
+
+#apresentacao > figure {
+    animation: surgir 0.7s ease backwards;
+}
+
+#texto-apresentacao {
+    animation: surgir 0.7s ease 0.1s backwards;
+}
+
+#stacks {
+    animation: surgir 0.7s ease 0.2s backwards;
+}
+
+/* Revelacao ao rolar: o atraso de cada bloco vem do JS */
+.revelar {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.65s cubic-bezier(0.22, 0.61, 0.36, 1),
+                transform 0.65s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.revelar.visivel {
+    opacity: 1;
+    transform: none;
+}
+
+/* Carrossel de stacks: some suave nas pontas e pausa no hover */
+#stacks {
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+
+#stacks:hover #icones-stacks,
+#stacks:focus-within #icones-stacks {
+    animation-play-state: paused;
+}
+
+/* Cartao de projeto: a capa cresce sem estourar o cartao */
+.projeto {
+    overflow: hidden;
+}
+
+.projeto:hover img {
+    transform: scale(1.05);
+}
+
+/* Botao de topo: aparece com fade e escala, em vez de aparecer seco */
+#btn-topo {
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(12px) scale(0.9);
+    pointer-events: none;
+    transition: background-color var(--transition), opacity 0.3s ease,
+                transform 0.3s ease, visibility 0.3s ease;
+}
+
+#btn-topo.visivel {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    pointer-events: auto;
+}
+
+#btn-topo:hover {
+    transform: translateY(-2px);
+}
+
+/* Quem pediu menos movimento nao recebe animacao nenhuma */
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+
+    #apresentacao > figure,
+    #texto-apresentacao,
+    #stacks { animation: none; }
+
+    .revelar {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    #icones-stacks { animation: none; }
+
+    #btn-topo,
+    header,
+    .logo { transition: none; }
+}

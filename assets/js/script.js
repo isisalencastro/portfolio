@@ -6,9 +6,7 @@ function voltarAoTopo() {
 const btnTopo = document.getElementById('btn-topo');
 if (btnTopo) {
     btnTopo.addEventListener('click', voltarAoTopo);
-    window.addEventListener('scroll', () => {
-        btnTopo.style.display = window.scrollY > 300 ? 'flex' : 'none';
-    });
+    // A visibilidade e por classe, com transicao: ver assets/js/animacoes.js
 }
 
 const listaServicos = document.getElementById('lista-servicos');
