@@ -1097,7 +1097,7 @@ header nav a:hover::after {
     transition: transform var(--transition), box-shadow var(--transition);
     padding: 28px;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     border: 2px solid var(--primary-color);
     gap: 28px;
 }
