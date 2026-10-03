@@ -91,10 +91,8 @@
     align-items: center;
     text-decoration: none;
     color: var(--text-color);
-    font-weight: bold;
+    font-weight: 600;
     font-size: 1.125rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
     transition: color 0.2s ease;
 }
 
@@ -194,8 +192,7 @@
     }
 
     #texto-apresentacao #ola-principal {
-        font-size: clamp(1.75rem, 10vw, 2rem);
-        letter-spacing: 2px;
+        font-size: clamp(2rem, 10vw, 2.5rem);
     }
 
     #texto-apresentacao a.btn {
@@ -281,7 +278,7 @@
     }
 
     #sobre h3 {
-        font-size: clamp(1.5rem, 6vw, 1.75rem);
+        font-size: clamp(1.9rem, 7vw, 2.25rem);
     }
 
     #sobre-mim {
@@ -321,7 +318,7 @@
     }
 
     #servicos h3 {
-        font-size: clamp(1.75rem, 5vw, 2.25rem);
+        font-size: clamp(1.9rem, 7vw, 2.25rem);
     }
 
     #carrossel-servicos {
@@ -481,9 +478,9 @@
         padding: 3.5rem 1rem;
     }
 
-    #projetos h3,
+    #projetos > h3,
     .titulo-secao {
-        font-size: clamp(1.4rem, 5vw, 1.75rem);
+        font-size: clamp(1.9rem, 7vw, 2.25rem);
     }
 
     .projeto {
@@ -562,9 +559,6 @@
         padding-bottom: max(2rem, var(--safe-bottom));
     }
 
-    #info-contato {
-        gap: 2rem;
-    }
 }
 
 @media (max-width: 768px) {
@@ -573,27 +567,13 @@
     }
 
     #contato h3 {
-        font-size: clamp(1.5rem, 5vw, 1.75rem);
-    }
-
-    #info-contato {
-        flex-direction: column;
-        align-items: center;
-        gap: 1.5rem;
-    }
-
-    #info-contato section {
-        min-width: 0;
-        width: 100%;
-        max-width: 320px;
+        font-size: clamp(1.9rem, 7vw, 2.25rem);
     }
 
     .links-contato {
         min-height: var(--touch-target);
         display: inline-flex;
         align-items: center;
-        justify-content: center;
-        padding: 12px 20px;
     }
 
     #btn-email {

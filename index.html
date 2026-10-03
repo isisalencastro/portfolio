@@ -68,7 +68,7 @@
 
     <body>
         <header>
-            <h2 class="logo">IBA</h2>
+            <h2 class="logo">ISIS<span class="logo-ponto">.</span></h2>
             <nav aria-label="Menu principal">
                 <ul>
                     <li><a href="#sobre">Sobre</a></li>
@@ -113,8 +113,8 @@
                             <p class="linha-typing">E sou <span id="auto-typing" aria-hidden="true"></span><span class="sr-only">Desenvolvedora de Software, AI Engineer e Criadora de Conteúdo</span></p>
                         </div>
                         <div class="btns-apresentacao">
-                            <a class="btn" href="./assets/pdfs/Isis Alencastro - Currículo.pdf" target="_blank" rel="noopener noreferrer">CURRÍCULO</a>
-                            <a class="btn btn-outline" href="https://isisalencastro.github.io/centralinks/" target="_blank">CENTRAL DE LINKS</a>
+                            <a class="btn" href="./assets/pdfs/Isis Alencastro - Currículo.pdf" target="_blank" rel="noopener noreferrer">Currículo</a>
+                            <a class="btn btn-outline" href="https://isisalencastro.github.io/centralinks/" target="_blank">Central de links</a>
                         </div>
                     </div>
                 </div>
@@ -275,44 +275,39 @@
         </main>
 
         <footer id="contato" aria-labelledby="contato-titulo">
-            <div id="titulos-contato">
-                <h3 id="contato-titulo">Contato</h3>
-                <p>Tem algum projeto em mente?</p>
-                <p>Entre em contato comigo!</p>
-                <button type="button" id="btn-email" aria-label="Copiar email">Copiar email</button>
-            </div>
-
-
-            <div id="info-contato">
-                <section id="email-localizacao">
-                    <div id="bloco-email">
-                        <div id="avatar-contato" aria-hidden="true">
-                            <div class="avatar-disco"><img src="./assets/images/avatar/isis-pixel.svg" alt="" width="96" height="120" /></div>
-                            <span class="avatar-balao">Bora conversar?</span>
+            <div id="contato-cartao">
+                <div id="contato-texto">
+                    <p class="sobretitulo">Contato</p>
+                    <h3 id="contato-titulo">Tem algum projeto em mente?</h3>
+                    <p class="contato-lead">Me escreva por email ou WhatsApp e a gente conversa.</p>
+                    <div class="contato-acoes">
+                        <button type="button" id="btn-email" aria-label="Copiar email">Copiar email</button>
+                        <a href="https://wa.me/message/GGEAJPHMSN6MD1" target="_blank" rel="noopener noreferrer" class="btn-secundario">WhatsApp <span aria-hidden="true">↗</span></a>
+                    </div>
+                    <dl id="info-contato">
+                        <div>
+                            <dt>Email</dt>
+                            <dd id="email">alencastroisis@gmail.com</dd>
                         </div>
                         <div>
-                            <h4>Email</h4>
-                            <p id="email">alencastroisis@gmail.com</p>
+                            <dt>Localização</dt>
+                            <dd>Porto Alegre, RS</dd>
                         </div>
-                    </div>
+                        <div>
+                            <dt>Redes</dt>
+                            <dd class="redes">
+                                <a href="https://www.linkedin.com/in/isisalencastro/" target="_blank" rel="noopener noreferrer" class="links-contato">LinkedIn</a>
+                                <a href="https://github.com/isisalencastro" target="_blank" rel="noopener noreferrer" class="links-contato">GitHub</a>
+                                <a href="https://www.youtube.com/@IsisAlencastro" target="_blank" rel="noopener noreferrer" class="links-contato">YouTube</a>
+                            </dd>
+                        </div>
+                    </dl>
+                </div>
 
-                    <div>
-                        <h4>Localização</h4>
-                        <p>Porto Alegre, RS</p>
-                    </div>
-                </section>
-
-                <section class="redes">
-                    <h4>Redes Sociais</h4>
-                    <a href="https://www.linkedin.com/in/isisalencastro/" target="_blank" rel="noopener noreferrer" class="links-contato">LinkedIn</a>
-                    <a href="https://github.com/isisalencastro" target="_blank" rel="noopener noreferrer" class="links-contato">GitHub</a>
-                    <a href="https://www.youtube.com/@IsisAlencastro" target="_blank" rel="noopener noreferrer" class="links-contato">YouTube</a>
-                </section>
-
-                <section class="redes">
-                <h4>Me escreva</h4>
-                <a href="https://wa.me/message/GGEAJPHMSN6MD1" target="_blank" rel="noopener noreferrer" class="links-contato">WhatsApp</a>
-                </section>
+                <div id="avatar-contato" aria-hidden="true">
+                    <span class="avatar-balao">Bora conversar?</span>
+                    <div class="avatar-palco"><img src="./assets/images/avatar/isis-pixel.svg" alt="" width="128" height="160" /></div>
+                </div>
             </div>
 
             <div id="copy">

@@ -1233,142 +1233,6 @@ header nav a:hover::after {
 
 /*---------------------- CONTATO STYLES ---------------------------*/
 
-#contato {
-    padding: 100px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 60px;
-    min-height: 80vh;
-    background-color: var(--bg-footer);
-    color: #fff;
-}
-
-#titulos-contato{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4px;
-    font-weight: 600;
-
-}
-
-#contato h3 {
-    font-size: 42px;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-weight: 800;
-    margin-bottom: 4px;
-    text-align: center;
-}
-
-#titulos-contato h3::after {
-    content: "";
-    display: block;
-    width: 80px;
-    height: 4px;
-    background-color: white;
-    margin: 0px auto 12px;
-    border-radius: 2px;
-}
-
-#titulos-contato button{
-    padding: 14px 32px;
-    font-size: 18px;
-    background-color: #185cb6;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    margin-top: 12px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    color: white;
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
-#info-contato {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 80px;
-    flex-wrap: wrap;
-    width: 100%;
-    max-width: 1200px;
-}
-
-#info-contato section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-    padding: 20px;
-    flex: 1;
-    min-width: 220px;
-}
-
-#info-contato h4 {
-    font-size: 24px;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    margin-bottom: 4px;
-    color: var(--secondary-color);
-    text-align: center;
-}
-
-#info-contato p {
-    color: white;
-    font-size: 18px;
-    text-align: center;
-}
-
-.redes {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-    flex-wrap: wrap;
-}
-
-.links-contato {
-    text-decoration: none;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: white;
-    padding: 12px 28px;
-    border-radius: 6px;
-    font-size: 18px;
-    transition: color 0.3s ease, transform 0.2s ease;
-}
-
-.links-contato:hover {
-    color: #0f3d7a;
-    transform: translateY(-2px);
-    cursor: pointer;
-}
-
-#btn-email {
-    padding: 14px 32px;
-    font-size: 18px;
-    background-color: #185cb6;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-#btn-email:hover {
-    background-color: #0f3d7a;
-    transform: translateY(-2px);
-}
-
-#btn-email a {
-    text-decoration: none;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: white;
-}
 
 /*---------------------- BOTÃO TOPO STYLES ---------------------------*/
 
@@ -1607,120 +1471,6 @@ header.header-rolado .logo {
 #btn-email:active,
 .btn-saiba-mais:active { transform: translateY(1px) scale(0.98); }
 
-/* ---- Personagem pixel no contato, ao lado do email ---- */
-#bloco-email {
-    display: flex;
-    align-items: center;
-    gap: 32px;
-}
-
-#bloco-email h4,
-#bloco-email p { text-align: left; }
-
-#avatar-contato {
-    position: relative;
-    flex-shrink: 0;
-}
-
-.avatar-disco {
-    width: 96px;
-    height: 96px;
-    border-radius: 50%;
-    background: radial-gradient(circle at 50% 42%, #ffffff 0%, #e3edfa 70%, #cfdcf0 100%);
-    box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.08), 0 0 0 12px rgba(255, 255, 255, 0.04);
-    overflow: hidden;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-}
-
-.avatar-disco img {
-    width: 68px;
-    height: 85px;
-    image-rendering: pixelated;
-    margin-bottom: 4px;
-    transform-origin: 50% 100%;
-}
-
-.avatar-balao {
-    position: relative;
-    background: #fff;
-    color: #101828;
-    font-weight: 700;
-    font-size: 16px;
-    padding: 10px 14px;
-    border-radius: 4px;
-    box-shadow: 4px 4px 0 #101828;
-    white-space: nowrap;
-    /* fica em cima do disco, apontando para ela */
-    position: absolute;
-    left: 50%;
-    bottom: calc(100% + 14px);
-    margin-left: -24px;
-    transform-origin: 24px 100%;
-}
-
-/* rabinho do balao, em degraus de pixel */
-.avatar-balao::before {
-    content: "";
-    position: absolute;
-    left: 14px;
-    top: 100%;
-    width: 12px;
-    height: 10px;
-    background: #fff;
-    clip-path: polygon(0 0, 100% 0, 0 100%);
-}
-
-/* Entrada: ela sobe de dentro do disco, depois o balao aparece */
-footer.revelar .avatar-disco img { transform: translateY(105%); }
-footer.revelar .avatar-balao { opacity: 0; transform: scale(0.6) translateY(8px); }
-
-/* Depois de entrar, o disco deixa de cortar: o pulo passa por cima da borda */
-#avatar-contato.parada .avatar-disco { overflow: visible; }
-
-footer.revelar.visivel .avatar-disco img {
-    transform: none;
-    transition: transform 0.6s var(--curva-mola) 0.35s;
-}
-
-footer.revelar.visivel .avatar-balao {
-    opacity: 1;
-    transform: none;
-    transition: opacity 0.3s ease 0.9s, transform 0.4s var(--curva-mola) 0.9s;
-}
-
-/* Respiro parado: sobe e desce em degrau, como sprite */
-@keyframes respirar {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-3px); }
-}
-
-/* Pulo quando o email e copiado */
-@keyframes pular {
-    0% { transform: translateY(0) scaleY(1); }
-    15% { transform: translateY(0) scaleY(0.88); }
-    45% { transform: translateY(-26px) scaleY(1.06); }
-    70% { transform: translateY(0) scaleY(0.92); }
-    85% { transform: translateY(-6px) scaleY(1); }
-    100% { transform: translateY(0) scaleY(1); }
-}
-
-#avatar-contato.parada .avatar-disco img { animation: respirar 1.4s steps(2, jump-none) infinite; }
-#avatar-contato:hover .avatar-disco img,
-#avatar-contato.pulou .avatar-disco img { animation: pular 0.7s var(--curva) 1; }
-#avatar-contato.pulou .avatar-balao { animation: surgirFoco 0.35s var(--curva); }
-
-body.darkmode .avatar-balao { box-shadow: 4px 4px 0 #000; }
-
-@media (max-width: 480px) {
-    #bloco-email { gap: 24px; }
-    .avatar-disco { width: 80px; height: 80px; }
-    .avatar-disco img { width: 56px; height: 70px; }
-    #bloco-email p { font-size: 16px; }
-    .avatar-balao { font-size: 13px; padding: 8px 10px; }
-}
-
 @media (prefers-reduced-motion: reduce) {
     .texto-apresentacao-inner > *,
     .btns-apresentacao,
@@ -1732,10 +1482,10 @@ body.darkmode .avatar-balao { box-shadow: 4px 4px 0 #000; }
     .projeto.inclinando,
     .servico.inclinando { transform: none; }
 
-    footer.revelar .avatar-disco img,
+    footer.revelar .avatar-palco img,
     footer.revelar .avatar-balao { transform: none; opacity: 1; }
 
-    #avatar-contato .avatar-disco img,
+    #avatar-contato .avatar-palco img,
     #avatar-contato .avatar-balao { animation: none !important; transition: none !important; }
 }
 
@@ -1811,4 +1561,542 @@ header nav a.link-iba { color: var(--primary-color); }
 @media (max-width: 768px) {
     #iba-cartao { padding: 28px 24px; font-size: 17px; }
     #iba h3 { font-size: 32px; }
+}
+
+/* ================= MODERNIZACAO (03/10/2026) ================= */
+/* Menos caixa alta, menos borda grossa, mais respiro. Titulos de secao terminam
+   em ponto azul, o mesmo ponto do logo "ISIS.". Cartoes com borda fina e sombra
+   suave. O contato virou um cartao com a personagem pixel num palco quadriculado. */
+
+:root {
+    --superficie: #ffffff;
+    --borda: rgba(15, 23, 42, 0.08);
+    --borda-forte: rgba(37, 99, 235, 0.35);
+    --sombra-cartao: 0 1px 2px rgba(15, 23, 42, 0.04), 0 8px 24px rgba(15, 23, 42, 0.06);
+    --sombra-cartao-alta: 0 2px 4px rgba(15, 23, 42, 0.05), 0 18px 40px rgba(15, 23, 42, 0.10);
+    --radius-cartao: 20px;
+}
+
+.darkmode {
+    --superficie: #131d33;
+    --borda: rgba(255, 255, 255, 0.08);
+    --borda-forte: rgba(96, 165, 250, 0.45);
+    --sombra-cartao: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.25);
+    --sombra-cartao-alta: 0 2px 4px rgba(0, 0, 0, 0.3), 0 18px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* ---- Topo: vidro fosco, logo ISIS. e menu sem caixa alta ---- */
+header {
+    background-color: color-mix(in srgb, var(--background-color) 78%, transparent);
+    -webkit-backdrop-filter: saturate(160%) blur(14px);
+    backdrop-filter: saturate(160%) blur(14px);
+    box-shadow: none;
+    border-bottom: 1px solid var(--borda);
+}
+
+header.header-rolado { box-shadow: var(--sombra-cartao); }
+
+header h2,
+header .logo {
+    font-size: 1.6rem;
+    letter-spacing: -0.02em;
+    font-weight: 800;
+}
+
+.logo-ponto {
+    color: var(--primary-color);
+    display: inline-block;
+    transition: transform 0.4s var(--curva-mola, ease);
+}
+
+header .logo:hover { color: var(--text-color); }
+header .logo:hover .logo-ponto { transform: translateY(-4px); }
+
+header nav ul { gap: 6px; }
+
+header nav a {
+    text-transform: none;
+    letter-spacing: 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-muted);
+    padding: 8px 14px;
+    border-radius: 999px;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+header nav a::after { display: none; }
+
+header nav a:hover {
+    color: var(--text-color);
+    background-color: var(--borda);
+}
+
+header nav a.link-iba {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.mobile-menu a {
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+/* ---- Home ---- */
+#texto-apresentacao #ola-principal {
+    text-transform: none;
+    letter-spacing: -0.02em;
+    font-size: clamp(40px, 5vw, 60px);
+}
+
+/* ---- Titulos de secao: sem caixa alta, terminando em ponto azul ---- */
+#sobre h3,
+#servicos h3,
+#projetos > h3,
+#iba h3,
+#contato h3,
+.titulo-secao {
+    text-transform: none;
+    letter-spacing: -0.025em;
+    font-size: clamp(34px, 4.2vw, 50px);
+    font-weight: 800;
+    color: var(--text-color);
+}
+
+#sobre h3::after,
+#servicos h3::after,
+#projetos > h3::after,
+#iba h3::after,
+#contato h3::after,
+.titulo-secao::after {
+    content: ".";
+    display: inline;
+    width: auto;
+    height: auto;
+    margin: 0;
+    background: none;
+    border-radius: 0;
+    color: var(--primary-color);
+    transform: none;
+    transition: none;
+}
+
+/* o titulo do contato ja termina em interrogacao */
+#contato h3::after { content: none; }
+
+/* titulo dentro de cartao de projeto nao leva a linha antiga */
+#projetos .infos-projeto h3 { text-align: left; }
+#projetos .infos-projeto h3::after { display: none; }
+
+.darkmode #redes-sociais img { filter: invert(1) grayscale(40%); }
+.darkmode #redes-sociais img:hover { filter: invert(1); }
+
+/* modal do Saiba mais no mesmo tom dos cartoes */
+.modal {
+    background: var(--superficie);
+    border: 1px solid var(--borda);
+    border-radius: 24px;
+    box-shadow: var(--sombra-cartao-alta);
+}
+
+.modal h4 {
+    text-transform: none;
+    font-size: 1.5rem;
+    letter-spacing: -0.01em;
+    color: var(--text-color);
+}
+
+.botoes-modal button,
+.botoes-modal .btn-modal-link { font-family: var(--font-main); }
+
+.botoes-modal button.close { border-width: 1px; border-color: var(--borda); }
+
+/* ---- Cartoes: borda fina, sombra suave, levanta no hover ---- */
+#sobre-mim,
+#iba-cartao,
+.servico,
+.projeto,
+.projeto-brandbook {
+    background: var(--superficie);
+    border: 1px solid var(--borda);
+    border-radius: var(--radius-cartao);
+    box-shadow: var(--sombra-cartao);
+}
+
+#sobre-mim:hover,
+.servico:hover,
+.projeto:hover,
+.projeto-brandbook:hover {
+    border-color: var(--borda-forte);
+    box-shadow: var(--sombra-cartao-alta);
+}
+
+#iba-cartao {
+    border-left-width: 1px;
+    background:
+        radial-gradient(120% 140% at 100% 0%, color-mix(in srgb, var(--primary-color) 10%, transparent) 0%, transparent 55%),
+        var(--superficie);
+}
+
+.servico { min-height: 440px; }
+
+.servico img {
+    filter: none;
+    padding: 18px;
+    max-width: 96px;
+    border-radius: 20px;
+    background: color-mix(in srgb, var(--primary-color) 9%, transparent);
+}
+
+.servico img:hover { transform: rotate(-4deg) scale(1.06); }
+
+.projeto img,
+.brandbook-imagem img {
+    box-shadow: none;
+    border: 1px solid var(--borda);
+}
+
+/* ---- Texto: sem justificar, sem negrito em tudo ---- */
+.servico h4,
+.infos-projeto h3,
+.infos-projeto h4,
+#projetos .infos-projeto h3,
+.brandbook-texto h3 {
+    text-transform: none;
+    letter-spacing: -0.01em;
+    color: var(--text-color);
+}
+
+.servico p,
+.infos-projeto p,
+.brandbook-texto p,
+#texto-sobre,
+#iba-cartao {
+    font-weight: 400;
+    text-align: left;
+    line-height: 1.75;
+}
+
+.servico p { text-align: center; color: var(--text-muted); }
+.infos-projeto p,
+.brandbook-texto p { color: var(--text-muted); }
+
+#dados-sobre p {
+    text-transform: none;
+    font-weight: 400;
+    font-size: 17px;
+}
+
+#dados-sobre p strong {
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+/* ---- Botoes: pilula, sem caixa alta ---- */
+#texto-apresentacao a,
+.servico > button,
+.infos-projeto a,
+.brandbook-texto .btn-projeto,
+#btn-pagprojeto,
+#btn-voltar-home,
+#btn-iba,
+.botoes-modal button,
+.botoes-modal .btn-modal-link,
+.tab-btn {
+    border-radius: 999px;
+    text-transform: none;
+    letter-spacing: 0;
+    font-weight: 600;
+    font-family: var(--font-main);
+}
+
+.tab-btn { border-width: 1px; }
+
+/* ---- Contato: um cartao, texto a esquerda, personagem a direita ---- */
+#contato {
+    padding: 110px 20px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 56px;
+    background-color: var(--bg-footer);
+    color: #fff;
+    --tinta-suave: rgba(255, 255, 255, 0.68);
+    --borda-escura: rgba(255, 255, 255, 0.12);
+}
+
+#contato-cartao {
+    width: 100%;
+    max-width: 1100px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 48px;
+    padding: 56px;
+    border-radius: 28px;
+    border: 1px solid var(--borda-escura);
+    background:
+        radial-gradient(90% 120% at 100% 100%, rgba(59, 130, 246, 0.22) 0%, transparent 60%),
+        rgba(255, 255, 255, 0.04);
+}
+
+#contato-texto {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.sobretitulo {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #93c5fd;
+}
+
+#contato h3 {
+    color: #fff;
+    text-align: left;
+    line-height: 1.1;
+    margin: 0;
+}
+
+.contato-lead {
+    font-size: 19px;
+    color: var(--tinta-suave);
+}
+
+.contato-acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+#btn-email,
+.btn-secundario {
+    font-family: var(--font-main);
+    padding: 14px 28px;
+    font-size: 17px;
+    font-weight: 600;
+    border-radius: 999px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+}
+
+#btn-email {
+    border: none;
+    background-color: #fff;
+    color: #0f172a;
+    min-width: 168px;
+}
+
+#btn-email:hover {
+    background-color: #dbeafe;
+    transform: translateY(-2px);
+}
+
+.btn-secundario {
+    border: 1px solid var(--borda-escura);
+    color: #fff;
+}
+
+.btn-secundario:hover {
+    border-color: rgba(255, 255, 255, 0.45);
+    transform: translateY(-2px);
+}
+
+#info-contato {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: start;
+    gap: 40px;
+    margin: 26px 0 0;
+    padding-top: 26px;
+    border-top: 1px solid var(--borda-escura);
+    width: 100%;
+}
+
+#info-contato dt {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--tinta-suave);
+    margin-bottom: 6px;
+}
+
+#info-contato dd {
+    margin: 0;
+    font-size: 17px;
+    color: #fff;
+}
+
+#info-contato .redes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.links-contato {
+    color: #fff;
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 0 1px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.25s ease, color 0.2s ease;
+}
+
+.links-contato:hover {
+    color: #93c5fd;
+    background-size: 100% 1px;
+}
+
+#copy {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.55);
+    text-align: center;
+}
+
+/* ---- Personagem pixel: palco quadriculado, como uma tela de jogo ---- */
+#avatar-contato {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.avatar-palco {
+    width: 220px;
+    height: 240px;
+    border-radius: 22px;
+    border: 1px solid var(--borda-escura);
+    background-color: rgba(15, 23, 42, 0.45);
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 16px 16px;
+    background-position: -1px -1px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+}
+
+/* chao em degraus de pixel */
+.avatar-palco::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 24px;
+    background: rgba(59, 130, 246, 0.25);
+    border-top: 4px solid rgba(147, 197, 253, 0.55);
+}
+
+.avatar-palco img {
+    width: 128px;
+    height: 160px;
+    image-rendering: pixelated;
+    margin-bottom: 20px;
+    transform-origin: 50% 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.avatar-balao {
+    position: relative;
+    margin-bottom: 14px;
+    background: #fff;
+    color: #0f172a;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 9px 14px;
+    border-radius: 4px;
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.35);
+    white-space: nowrap;
+    transform-origin: 50% 100%;
+}
+
+/* rabinho do balao, em degraus de pixel */
+.avatar-balao::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    width: 12px;
+    height: 8px;
+    margin-left: -6px;
+    background: #fff;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+/* Entrada: ela sobe do chao, depois o balao aparece */
+footer.revelar .avatar-palco img { transform: translateY(110%); }
+footer.revelar .avatar-balao { opacity: 0; transform: scale(0.6) translateY(8px); }
+
+footer.revelar.visivel .avatar-palco img {
+    transform: none;
+    transition: transform 0.6s var(--curva-mola) 0.35s;
+}
+
+footer.revelar.visivel .avatar-balao {
+    opacity: 1;
+    transform: none;
+    transition: opacity 0.3s ease 0.9s, transform 0.4s var(--curva-mola) 0.9s;
+}
+
+/* Respiro parado: sobe e desce em degrau, como sprite */
+@keyframes respirar {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
+}
+
+/* Pulo quando o email e copiado */
+@keyframes pular {
+    0% { transform: translateY(0) scaleY(1); }
+    15% { transform: translateY(0) scaleY(0.88); }
+    45% { transform: translateY(-36px) scaleY(1.06); }
+    70% { transform: translateY(0) scaleY(0.92); }
+    85% { transform: translateY(-8px) scaleY(1); }
+    100% { transform: translateY(0) scaleY(1); }
+}
+
+#avatar-contato.parada .avatar-palco img { animation: respirar 1.4s steps(2, jump-none) infinite; }
+#avatar-contato:hover .avatar-palco img,
+#avatar-contato.pulou .avatar-palco img { animation: pular 0.7s var(--curva) 1; }
+#avatar-contato.pulou .avatar-balao { animation: surgirFoco 0.35s var(--curva); }
+
+@media (max-width: 860px) {
+    #contato-cartao {
+        grid-template-columns: 1fr;
+        padding: 36px 24px;
+        gap: 32px;
+    }
+
+    #avatar-contato { order: -1; }
+    .avatar-palco { width: 100%; max-width: 320px; height: 200px; }
+    .avatar-palco img { width: 104px; height: 130px; }
+
+    #info-contato {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    header nav a { font-size: 15px; padding: 8px 10px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    footer.revelar .avatar-palco img,
+    footer.revelar .avatar-balao { transform: none; opacity: 1; }
+
+    #avatar-contato .avatar-palco img,
+    #avatar-contato .avatar-balao { animation: none !important; transition: none !important; }
 }
