@@ -205,11 +205,19 @@ if (tabBtns.length && tabContents.length) {
 const btnEmail = document.getElementById('btn-email');
 const emailEl = document.getElementById('email');
 if (btnEmail && emailEl) {
+    const textoOriginal = btnEmail.textContent;
     btnEmail.addEventListener('click', () => {
         const email = emailEl.textContent.trim();
+        const avisa = (texto) => {
+            btnEmail.textContent = texto;
+            clearTimeout(btnEmail._volta);
+            btnEmail._volta = setTimeout(() => { btnEmail.textContent = textoOriginal; }, 2200);
+        };
         navigator.clipboard.writeText(email).then(() => {
-            alert('Email copiado: ' + email);
-        });
+            avisa('Copiado!');
+            // A personagem do contato comemora (ver assets/js/animacoes.js)
+            document.dispatchEvent(new CustomEvent('email-copiado'));
+        }).catch(() => avisa(email));
     });
 }
 

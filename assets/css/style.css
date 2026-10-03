@@ -1526,3 +1526,210 @@ header.header-rolado .logo {
     header,
     .logo { transition: none; }
 }
+
+/* ================= MOTION DESIGN E PERSONAGEM PIXEL (03/10/2026) ================= */
+/* Uma curva so para o site inteiro, entrada da home em sequencia, titulo que se
+   sublinha ao aparecer, barra de leitura, cartao que inclina sob o mouse e a
+   personagem pixel da IBA no contato. Menos movimento no sistema desliga tudo. */
+
+:root {
+    --curva: cubic-bezier(0.22, 0.61, 0.36, 1);
+    --curva-mola: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Home: cada linha entra na sua vez, saindo de leve desfoque */
+@keyframes surgirFoco {
+    from { opacity: 0; transform: translateY(18px); filter: blur(6px); }
+    to { opacity: 1; transform: none; filter: none; }
+}
+
+@keyframes flutuar {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+#texto-apresentacao { animation: none; }
+
+.texto-apresentacao-inner > *,
+.btns-apresentacao {
+    animation: surgirFoco 0.8s var(--curva) backwards;
+}
+
+.texto-apresentacao-inner > :nth-child(1) { animation-delay: 0.15s; }
+.texto-apresentacao-inner > :nth-child(2) { animation-delay: 0.3s; }
+.texto-apresentacao-inner > :nth-child(3) { animation-delay: 0.45s; }
+.btns-apresentacao { animation-delay: 0.6s; }
+
+#apresentacao > figure {
+    animation: surgirFoco 0.9s var(--curva) backwards,
+               flutuar 6s ease-in-out 1.2s infinite;
+}
+
+/* O retrato so se inclina um pouco no hover, sem o giro de 12 graus */
+#foto-notion { transition: transform 0.5s var(--curva-mola); }
+#foto-notion:hover {
+    transform: scale(1.03) rotate(-2deg);
+    rotate: 0deg;
+}
+
+/* Titulos de secao: a linha embaixo se desenha quando a secao aparece */
+.revelar h3::after {
+    transform: scaleX(0);
+    transition: transform 0.7s var(--curva) 0.25s;
+}
+
+.revelar.visivel h3::after { transform: scaleX(1); }
+
+/* Barra de leitura no topo (criada pelo JS) */
+#progresso-leitura {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--primary-color);
+    transform-origin: 0 50%;
+    transform: scaleX(0);
+    z-index: 1001;
+    pointer-events: none;
+}
+
+/* Cartao de projeto e de servico inclina seguindo o mouse (so com mouse) */
+.projeto.inclinando,
+.servico.inclinando {
+    transform: perspective(900px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)) translateY(-6px);
+    transition: transform 0.15s ease-out, box-shadow 0.3s ease;
+}
+
+/* Botoes: leve afundada no clique */
+.btn:active,
+.btn-projeto:active,
+#btn-email:active,
+.btn-saiba-mais:active { transform: translateY(1px) scale(0.98); }
+
+/* ---- Personagem pixel no contato ---- */
+#avatar-contato {
+    position: relative;
+    margin-bottom: 18px;
+}
+
+.avatar-disco {
+    width: 136px;
+    height: 136px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 50% 42%, #ffffff 0%, #e3edfa 70%, #cfdcf0 100%);
+    box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.08), 0 0 0 18px rgba(255, 255, 255, 0.04);
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.avatar-disco img {
+    width: 96px;
+    height: 120px;
+    image-rendering: pixelated;
+    margin-bottom: 4px;
+    transform-origin: 50% 100%;
+}
+
+.avatar-balao {
+    position: relative;
+    background: #fff;
+    color: #101828;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 10px 14px;
+    border-radius: 4px;
+    box-shadow: 4px 4px 0 #101828;
+    white-space: nowrap;
+    /* fica ao lado do disco sem tirar o disco do centro */
+    position: absolute;
+    left: calc(100% + 16px);
+    top: 50%;
+    margin-top: -21px;
+}
+
+/* rabinho do balao, em degraus de pixel */
+.avatar-balao::before {
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    margin-top: -5px;
+    background: #fff;
+    clip-path: polygon(0 50%, 100% 0, 100% 100%);
+}
+
+/* Entrada: ela sobe de dentro do disco, depois o balao aparece */
+footer.revelar .avatar-disco img { transform: translateY(105%); }
+footer.revelar .avatar-balao { opacity: 0; transform: scale(0.6) translateX(-12px); }
+
+/* Depois de entrar, o disco deixa de cortar: o pulo passa por cima da borda */
+#avatar-contato.parada .avatar-disco { overflow: visible; }
+
+footer.revelar.visivel .avatar-disco img {
+    transform: none;
+    transition: transform 0.6s var(--curva-mola) 0.35s;
+}
+
+footer.revelar.visivel .avatar-balao {
+    opacity: 1;
+    transform: none;
+    transition: opacity 0.3s ease 0.9s, transform 0.4s var(--curva-mola) 0.9s;
+}
+
+/* Respiro parado: sobe e desce em degrau, como sprite */
+@keyframes respirar {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-3px); }
+}
+
+/* Pulo quando o email e copiado */
+@keyframes pular {
+    0% { transform: translateY(0) scaleY(1); }
+    15% { transform: translateY(0) scaleY(0.88); }
+    45% { transform: translateY(-26px) scaleY(1.06); }
+    70% { transform: translateY(0) scaleY(0.92); }
+    85% { transform: translateY(-6px) scaleY(1); }
+    100% { transform: translateY(0) scaleY(1); }
+}
+
+#avatar-contato.parada .avatar-disco img { animation: respirar 1.4s steps(2, jump-none) infinite; }
+#avatar-contato:hover .avatar-disco img,
+#avatar-contato.pulou .avatar-disco img { animation: pular 0.7s var(--curva) 1; }
+#avatar-contato.pulou .avatar-balao { animation: surgirFoco 0.35s var(--curva); }
+
+body.darkmode .avatar-balao { box-shadow: 4px 4px 0 #000; }
+
+@media (max-width: 480px) {
+    .avatar-disco { width: 112px; height: 112px; }
+    .avatar-disco img { width: 80px; height: 100px; }
+    .avatar-balao {
+        font-size: 13px;
+        padding: 8px 10px;
+        left: calc(100% - 18px);
+        top: -6px;
+        margin-top: 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .texto-apresentacao-inner > *,
+    .btns-apresentacao,
+    #apresentacao > figure { animation: none; }
+
+    .revelar h3::after { transform: none; transition: none; }
+    #progresso-leitura { display: none; }
+
+    .projeto.inclinando,
+    .servico.inclinando { transform: none; }
+
+    footer.revelar .avatar-disco img,
+    footer.revelar .avatar-balao { transform: none; opacity: 1; }
+
+    #avatar-contato .avatar-disco img,
+    #avatar-contato .avatar-balao { animation: none !important; transition: none !important; }
+}
