@@ -3,72 +3,121 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-        <meta name="description" content="Portfólio de Isis Beatriz de Alencastro: Desenvolvedora de Software | AI Engineer | Criadora de Conteúdo. IA aplicada com LLM, RAG e agentes em produção. Python, TypeScript e SQL. Porto Alegre, RS." />
-        <meta name="keywords" content="Isis Alencastro, desenvolvedora de software, AI Engineer, criadora de conteúdo, IA aplicada, LLM, RAG, agentes de IA, automação com IA, Python, TypeScript, React, n8n, Porto Alegre" />
+        <title>Isis Alencastro | Desenvolvedora e AI Engineer em Porto Alegre</title>
+        <meta name="description" content="Isis Alencastro, desenvolvedora de software e AI Engineer em Porto Alegre: agentes de IA, RAG, automações com n8n e sites. Veja os projetos e fale comigo." />
         <meta name="author" content="Isis Beatriz de Alencastro" />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://isisalencastro.github.io/portfolio/" />
+        <meta name="robots" content="index, follow, max-image-preview:large" />
+        <link rel="canonical" href="https://isisalencastro.site/" />
+        <link rel="alternate" hreflang="pt-BR" href="https://isisalencastro.site/" />
 
-        <!-- Open Graph -->
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://isisalencastro.github.io/portfolio/" />
-        <meta property="og:title" content="Isis Alencastro | Portfólio" />
-        <meta property="og:description" content="Desenvolvedora de Software | AI Engineer | Criadora de Conteúdo. IA aplicada: LLM, RAG e agentes em produção. Python, TypeScript e SQL. Porto Alegre, RS." />
-        <meta property="og:image" content="https://isisalencastro.github.io/portfolio/assets/images/fotos/foto-isisalencastro.png" />
-        <meta property="og:image:alt" content="Foto de Isis Beatriz de Alencastro" />
+        <!-- Open Graph (LinkedIn, WhatsApp, Facebook) -->
+        <meta property="og:type" content="profile" />
+        <meta property="og:site_name" content="Isis Alencastro" />
+        <meta property="og:url" content="https://isisalencastro.site/" />
+        <meta property="og:title" content="Isis Alencastro | Desenvolvedora e AI Engineer em Porto Alegre" />
+        <meta property="og:description" content="Desenvolvedora de software e AI Engineer em Porto Alegre. IA aplicada em produção: agentes, RAG, automações com n8n e sites. Fundadora da IBA Estúdio." />
+        <meta property="og:image" content="https://isisalencastro.site/assets/images/og/og-isis.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Isis Alencastro, desenvolvedora de software e AI Engineer em Porto Alegre" />
         <meta property="og:locale" content="pt_BR" />
+        <meta property="profile:first_name" content="Isis" />
+        <meta property="profile:last_name" content="Alencastro" />
 
-        <!-- Twitter Card -->
+        <!-- Twitter / X -->
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Isis Alencastro | Portfólio" />
-        <meta name="twitter:description" content="Desenvolvedora de Software | AI Engineer | Criadora de Conteúdo. IA aplicada com LLM, RAG e agentes. Porto Alegre, RS." />
-        <meta name="twitter:image" content="https://isisalencastro.github.io/portfolio/assets/images/fotos/foto-isisalencastro.png" />
+        <meta name="twitter:title" content="Isis Alencastro | Desenvolvedora e AI Engineer em Porto Alegre" />
+        <meta name="twitter:description" content="Desenvolvedora de software e AI Engineer em Porto Alegre. IA aplicada em produção: agentes, RAG, automações com n8n e sites. Fundadora da IBA Estúdio." />
+        <meta name="twitter:image" content="https://isisalencastro.site/assets/images/og/og-isis.png" />
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link rel="preload" href="./assets/css/style.css" as="style" />
-        <link rel="preload" href="./assets/css/responsividade.css" as="style" />
         <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-        <link rel="stylesheet" href="./assets/css/style.css" />
-        <link rel="stylesheet" href="./assets/css/responsividade.css" />
+        <link rel="stylesheet" href="./assets/css/style.css?v=20261003b" />
+        <link rel="stylesheet" href="./assets/css/responsividade.css?v=20261003b" />
         <link rel="icon" href="./assets/images/fotos/my-notion-face-portrait.png" type="image/png" />
+        <link rel="apple-touch-icon" href="./assets/images/fotos/my-notion-face-portrait.png" />
         <meta name="theme-color" content="#2563eb" />
         <meta name="color-scheme" content="light dark" />
-        <title>Isis Alencastro | Desenvolvedora de Software, AI Engineer e Criadora de Conteúdo</title>
 
         <script type="application/ld+json">
         {
             "@context": "https://schema.org",
-            "@type": "Person",
-            "name": "Isis Beatriz de Alencastro",
-            "url": "https://isisalencastro.github.io/portfolio/",
-            "image": "https://isisalencastro.github.io/portfolio/assets/images/fotos/foto-isisalencastro.png",
-            "jobTitle": "Desenvolvedora de Software e AI Engineer",
-            "description": "Desenvolvedora de Software | AI Engineer | Criadora de Conteúdo",
-            "worksFor": { "@type": "Organization", "name": "Freelancer" },
-            "address": { "@type": "PostalAddress", "addressLocality": "Porto Alegre", "addressRegion": "RS" },
-            "email": "alencastroisis@gmail.com",
-            "sameAs": [
-                "https://www.linkedin.com/in/isisalencastro/",
-                "https://github.com/isisalencastro",
-                "https://www.youtube.com/@IsisAlencastro"
+            "@graph": [
+                {
+                    "@type": "ProfilePage",
+                    "@id": "https://isisalencastro.site/#pagina",
+                    "url": "https://isisalencastro.site/",
+                    "name": "Isis Alencastro | Desenvolvedora e AI Engineer em Porto Alegre",
+                    "inLanguage": "pt-BR",
+                    "dateModified": "2026-10-03",
+                    "mainEntity": {
+                        "@id": "https://isisalencastro.site/#isis"
+                    }
+                },
+                {
+                    "@type": "Person",
+                    "@id": "https://isisalencastro.site/#isis",
+                    "name": "Isis Beatriz de Alencastro",
+                    "alternateName": "Isis Alencastro",
+                    "url": "https://isisalencastro.site/",
+                    "image": "https://isisalencastro.site/assets/images/fotos/foto-isisalencastro.png",
+                    "jobTitle": "Desenvolvedora de Software e AI Engineer",
+                    "description": "Desenvolvedora de software e AI Engineer em Porto Alegre, com foco em IA aplicada: agentes de IA, RAG, automações com n8n e sites.",
+                    "worksFor": {
+                        "@type": "Organization",
+                        "name": "IBA Estúdio",
+                        "url": "https://www.ibaestudio.com"
+                    },
+                    "founder": {
+                        "@type": "Organization",
+                        "name": "IBA Estúdio",
+                        "url": "https://www.ibaestudio.com"
+                    },
+                    "address": {
+                        "@type": "PostalAddress",
+                        "addressLocality": "Porto Alegre",
+                        "addressRegion": "RS",
+                        "addressCountry": "BR"
+                    },
+                    "email": "mailto:alencastroisis@gmail.com",
+                    "knowsAbout": [
+                        "Inteligência Artificial",
+                        "LLM",
+                        "RAG",
+                        "Agentes de IA",
+                        "Automação com n8n",
+                        "Python",
+                        "TypeScript",
+                        "React",
+                        "PostgreSQL",
+                        "Supabase",
+                        "Desenvolvimento web"
+                    ],
+                    "sameAs": [
+                        "https://www.linkedin.com/in/isisalencastro/",
+                        "https://github.com/isisalencastro",
+                        "https://www.youtube.com/@IsisAlencastro"
+                    ]
+                },
+                {
+                    "@type": "WebSite",
+                    "@id": "https://isisalencastro.site/#site",
+                    "url": "https://isisalencastro.site/",
+                    "name": "Isis Alencastro",
+                    "inLanguage": "pt-BR",
+                    "author": {
+                        "@id": "https://isisalencastro.site/#isis"
+                    }
+                }
             ]
-        }
-        </script>
-        <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "WebSite",
-            "name": "Portfólio Isis Alencastro",
-            "url": "https://isisalencastro.github.io/portfolio/",
-            "author": { "@type": "Person", "name": "Isis Beatriz de Alencastro" }
         }
         </script>
     </head>
 
     <body>
         <header>
-            <h2 class="logo">ISIS<span class="logo-ponto">.</span></h2>
+            <a class="logo" href="#home" aria-label="Isis Alencastro, voltar ao início">ISIS<span class="logo-ponto">.</span></a>
             <nav aria-label="Menu principal">
                 <ul>
                     <li><a href="#sobre">Sobre</a></li>
@@ -111,6 +160,7 @@
                             <p id="ola-principal">Olá mundo,</p>
                             <h1 class="linha-nome">Me chamo <strong>Isis Beatriz de Alencastro</strong></h1>
                             <p class="linha-typing">E sou <span id="auto-typing" aria-hidden="true"></span><span class="sr-only">Desenvolvedora de Software, AI Engineer e Criadora de Conteúdo</span></p>
+                            <p class="hero-resumo">Coloco IA para trabalhar dentro de sistemas reais: agentes, RAG e automações com n8n, além de sites sob medida. Fundadora da <a href="#iba">IBA Estúdio</a>, em Porto Alegre.</p>
                         </div>
                         <div class="btns-apresentacao">
                             <a class="btn" href="./assets/pdfs/Isis Alencastro - Currículo.pdf" target="_blank" rel="noopener noreferrer">Currículo</a>
@@ -137,7 +187,7 @@
             </section>
 
             <section id="sobre" aria-labelledby="sobre-mim-titulo">
-                <h3 id="sobre-mim-titulo">Sobre mim</h3>
+                <h2 id="sobre-mim-titulo">Sobre mim</h2>
                 <div id="sobre-mim">
                     <section id="dados-sobre">
                     <figure id="foto-sobre">
@@ -156,15 +206,15 @@
                     </div>
                     </section>
                     <div id="texto-sobre">
-                        <p>
-                        Sou desenvolvedora de software e AI Engineer, com foco em IA aplicada: colocar modelo de linguagem dentro de sistema que roda de verdade. Integro LLM (GPT-4 e Claude) a canais como o WhatsApp Business, mantenho backend em PostgreSQL com busca semântica vetorial (RAG) e construo automações em n8n que conectam banco de dados, modelo e canal. Também desenvolvo sites e aplicações web em React, TypeScript e Python, e crio conteúdo sobre a minha jornada de aprendizado no LinkedIn e no YouTube. Sou estudante de Ciência da Computação na UniRitter e fundadora do meu próprio estúdio de tecnologia. Trabalho com organização, cuidado com dado e teste antes de publicar: nada entra no ar sem alguém conferir o que foi entregue.
-                        </p>
+                        <p>Sou desenvolvedora de software e AI Engineer, com foco em IA aplicada: colocar modelo de linguagem dentro de sistema que roda de verdade.</p>
+                        <p>Integro LLM (GPT-4 e Claude) a canais como o WhatsApp Business, mantenho backend em PostgreSQL com busca semântica vetorial (RAG) e construo automações em n8n que conectam banco de dados, modelo e canal. Também desenvolvo sites e aplicações web em React, TypeScript e Python.</p>
+                        <p>Sou estudante de Ciência da Computação na UniRitter, fundadora do meu próprio estúdio de tecnologia e crio conteúdo sobre a minha jornada no LinkedIn e no YouTube. Trabalho com organização, cuidado com dado e teste antes de publicar: nada entra no ar sem alguém conferir o que foi entregue.</p>
                     </div>
                 </div>
             </section>
 
             <section id="iba" aria-labelledby="iba-titulo">
-                <h3 id="iba-titulo">IBA Estúdio</h3>
+                <h2 id="iba-titulo">IBA Estúdio</h2>
                 <div id="iba-cartao">
                     <p>A IBA é o meu estúdio de tecnologia, aqui em Porto Alegre. É onde o que você vê neste portfólio vira trabalho para empresas: sites, sistemas e integrações de IA que fazem a operação rodar, do atendimento e das vendas aos dados e aos processos internos.</p>
                     <p>Atendimento direto comigo, prazo combinado por escrito e nada no ar sem teste.</p>
@@ -172,14 +222,14 @@
                 </div>
             </section>
 
-            <section id="servicos">
-                <h3>Serviços</h3>
+            <section id="servicos" aria-labelledby="servicos-titulo">
+                <h2 id="servicos-titulo">Serviços</h2>
                 <div id="carrossel-servicos">
                     <button type="button" id="prev-servico" aria-label="Serviço anterior"><img src="./assets/images/icons/angle-left.svg" alt="" width="24" height="24" /></button>
                     <div id="lista-servicos">
                     <div class="servico">
                         <img src="./assets/images/icons/robot.svg" alt="Automação com IA" width="80" height="80" />
-                        <h4>Automação com IA</h4>
+                        <h3>Automação com IA</h3>
                         <p>Criação de fluxos inteligentes, integrações entre ferramentas e chatbots para otimizar processos manuais e ganhar eficiência.</p>
                         <button type="button" class="btn-saiba-mais" data-modal="modal-automacao">Saiba Mais</button>
                     </div>
@@ -198,7 +248,7 @@
 
                     <div class="servico">
                         <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/icons/code-slash.svg" alt="Ícone de desenvolvimento de software" width="80" height="80" style="filter: brightness(0) saturate(100%) invert(27%) sepia(94%) saturate(1500%) hue-rotate(195deg) brightness(95%) contrast(90%);" />
-                        <h4>Desenvolvimento de Softwares</h4>
+                        <h3>Desenvolvimento de Softwares</h3>
                         <p>Desenvolvimento de softwares personalizados, com foco em escalabilidade, performance, segurança e experiência do usuário.</p>
                         <button type="button" class="btn-saiba-mais" data-modal="modal-devsoft">Saiba Mais</button>
                     </div>
@@ -217,7 +267,7 @@
 
                     <div class="servico">
                         <img src="./assets/images/icons/website.svg" alt="Desenvolvimento de Sites" width="80" height="80" />
-                        <h4>Desenvolvimento de Sites</h4>
+                        <h3>Desenvolvimento de Sites</h3>
                         <p>Criação de sites institucionais e landing pages modernos, responsivos e otimizados para converter visitantes em clientes.</p>
                         <button type="button" class="btn-saiba-mais" data-modal="modal-sites">Saiba Mais</button>
                     </div>
@@ -240,12 +290,12 @@
             </section>
 
             <section id="projetos" aria-labelledby="projetos-titulo">
-                <h3 id="projetos-titulo">Projetos</h3>
+                <h2 id="projetos-titulo">Projetos</h2>
                 <div id="lista-projetos">
                     <article class="projeto">
                         <img src="./assets/images/capas-projetos/capa-proj-familyhub.png" alt="Capa do projeto FamilyHub" width="300" height="200" loading="lazy" />
                         <div class="infos-projeto">
-                            <h4>FamilyHub</h4>
+                            <h3>FamilyHub</h3>
                             <p>Aplicativo desktop para gestão familiar completa, construído com Tauri v2 e React 19. Unifica em uma única interface finanças, tarefas, documentos, calendário, cardápio semanal e controle de pets, com sincronização em tempo real via Supabase Realtime e sistema de atualização automática nativo.</p>
                             <p>Desenvolvido em 2026.</p>
                             <a href="https://github.com/isisalencastro/FamilyHub" class="btn-projeto" target="_blank" rel="noopener noreferrer">Ver Projeto</a>
@@ -254,7 +304,7 @@
                     <article class="projeto">
                         <img src="./assets/images/capas-projetos/capa-proj-gerador-conteudo.png" alt="Capa do projeto Gerador de Conteúdo AI" width="300" height="200" loading="lazy" />
                         <div class="infos-projeto">
-                            <h4>Gerador de Conteúdo AI</h4>
+                            <h3>Gerador de Conteúdo AI</h3>
                             <p>Sistema de automação de conteúdo para YouTube usando N8N, OpenAI (GPT-4o) e Notion como hub central. Gera ideias de vídeo alinhadas com a estratégia editorial do creator e transforma ideias aprovadas em roteiros completos de forma automática.</p>
                             <p>Desenvolvido em 2026.</p>
                             <a href="https://github.com/isisalencastro/Gerador-de-Conteudo-AI" class="btn-projeto" target="_blank" rel="noopener noreferrer">Ver Projeto</a>
@@ -263,7 +313,7 @@
                     <article class="projeto">
                         <img src="./assets/images/capas-projetos/capa-proj-gametools.png" alt="Capa do projeto Jogos IBA" width="300" height="200" loading="lazy" />
                         <div class="infos-projeto">
-                            <h4>Jogos IBA</h4>
+                            <h3>Jogos IBA</h3>
                             <p>Catálogo de jogos curtos para o navegador, em HTML, CSS e JavaScript puro, sem cadastro. O destaque é O Nó do dia, um tabuleiro que muda a cada dia, com identidade visual da IBA, tema escuro opcional e layout responsivo.</p>
                             <p>Desenvolvido em 2026.</p>
                             <a href="https://jogos.ibaestudio.com/" class="btn-projeto" target="_blank" rel="noopener noreferrer">Ver Projeto</a>
@@ -278,7 +328,7 @@
             <div id="contato-cartao">
                 <div id="contato-texto">
                     <p class="sobretitulo">Contato</p>
-                    <h3 id="contato-titulo">Tem algum projeto em mente?</h3>
+                    <h2 id="contato-titulo">Tem algum projeto em mente?</h2>
                     <p class="contato-lead">Me escreva por email ou WhatsApp e a gente conversa.</p>
                     <div class="contato-acoes">
                         <button type="button" id="btn-email" aria-label="Copiar email">Copiar email</button>
@@ -317,8 +367,8 @@
 
         <button type="button" id="btn-topo" aria-label="Voltar ao topo da página"><img src="./assets/images/icons/arrow-up-svgrepo-com.svg" alt="" width="24" height="24" /></button>
     </body>
-    <script src="./assets/js/script.js" defer></script>
-    <script src="./assets/js/animacoes.js" defer></script>
+    <script src="./assets/js/script.js?v=20261003b" defer></script>
+    <script src="./assets/js/animacoes.js?v=20261003b" defer></script>
 </html>
 
 

@@ -277,7 +277,7 @@
         gap: 2rem;
     }
 
-    #sobre h3 {
+    #sobre h2 {
         font-size: clamp(1.9rem, 7vw, 2.25rem);
     }
 
@@ -317,7 +317,7 @@
         gap: 2rem;
     }
 
-    #servicos h3 {
+    #servicos h2 {
         font-size: clamp(1.9rem, 7vw, 2.25rem);
     }
 
@@ -366,7 +366,7 @@
         padding: 1.25rem 1rem;
     }
 
-    .servico h4 {
+    .servico h3 {
         font-size: 1.1rem;
     }
 
@@ -478,7 +478,7 @@
         padding: 3.5rem 1rem;
     }
 
-    #projetos > h3,
+    #projetos > h2,
     .titulo-secao {
         font-size: clamp(1.9rem, 7vw, 2.25rem);
     }
@@ -566,7 +566,7 @@
         padding: 3.5rem 1rem;
     }
 
-    #contato h3 {
+    #contato h2 {
         font-size: clamp(1.9rem, 7vw, 2.25rem);
     }
 
