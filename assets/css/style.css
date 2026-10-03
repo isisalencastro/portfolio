@@ -1738,3 +1738,77 @@ body.darkmode .avatar-balao { box-shadow: 4px 4px 0 #000; }
     #avatar-contato .avatar-disco img,
     #avatar-contato .avatar-balao { animation: none !important; transition: none !important; }
 }
+
+/* ================= IBA ESTUDIO NA HOME E NO MENU (03/10/2026) ================= */
+#iba {
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    background-color: var(--background-color);
+}
+
+#iba h3 {
+    font-size: 42px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: center;
+    font-weight: 800;
+    color: var(--primary-color);
+}
+
+#iba h3::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: var(--primary-color);
+    margin: 12px auto 0;
+    border-radius: 2px;
+}
+
+#iba-cartao {
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 40px 56px;
+    border-radius: var(--radius-lg);
+    border: 2px solid var(--primary-color);
+    border-left-width: 10px;
+    box-shadow: var(--shadow-md);
+    color: var(--text-color);
+    font-size: 20px;
+    line-height: 1.8;
+    font-weight: 600;
+}
+
+#btn-iba {
+    margin-top: 8px;
+    padding: 14px 28px;
+    font-size: 18px;
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+#btn-iba:hover {
+    background-color: var(--primary-hover, var(--secondary-color));
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+header nav a.link-iba { color: var(--primary-color); }
+.mobile-menu .link-iba span[aria-hidden="true"] { margin-left: 6px; }
+
+@media (max-width: 768px) {
+    #iba-cartao { padding: 28px 24px; font-size: 17px; }
+    #iba h3 { font-size: 32px; }
+}
