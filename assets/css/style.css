@@ -1607,18 +1607,27 @@ header.header-rolado .logo {
 #btn-email:active,
 .btn-saiba-mais:active { transform: translateY(1px) scale(0.98); }
 
-/* ---- Personagem pixel no contato ---- */
+/* ---- Personagem pixel no contato, ao lado do email ---- */
+#bloco-email {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+#bloco-email h4,
+#bloco-email p { text-align: left; }
+
 #avatar-contato {
     position: relative;
-    margin-bottom: 18px;
+    flex-shrink: 0;
 }
 
 .avatar-disco {
-    width: 136px;
-    height: 136px;
+    width: 96px;
+    height: 96px;
     border-radius: 50%;
     background: radial-gradient(circle at 50% 42%, #ffffff 0%, #e3edfa 70%, #cfdcf0 100%);
-    box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.08), 0 0 0 18px rgba(255, 255, 255, 0.04);
+    box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.08), 0 0 0 12px rgba(255, 255, 255, 0.04);
     overflow: hidden;
     display: flex;
     align-items: flex-end;
@@ -1626,8 +1635,8 @@ header.header-rolado .logo {
 }
 
 .avatar-disco img {
-    width: 96px;
-    height: 120px;
+    width: 68px;
+    height: 85px;
     image-rendering: pixelated;
     margin-bottom: 4px;
     transform-origin: 50% 100%;
@@ -1643,29 +1652,29 @@ header.header-rolado .logo {
     border-radius: 4px;
     box-shadow: 4px 4px 0 #101828;
     white-space: nowrap;
-    /* fica ao lado do disco sem tirar o disco do centro */
+    /* fica em cima do disco, apontando para ela */
     position: absolute;
-    left: calc(100% + 16px);
-    top: 50%;
-    margin-top: -21px;
+    left: 50%;
+    bottom: calc(100% + 14px);
+    margin-left: -24px;
+    transform-origin: 24px 100%;
 }
 
 /* rabinho do balao, em degraus de pixel */
 .avatar-balao::before {
     content: "";
     position: absolute;
-    left: -10px;
-    top: 50%;
-    width: 10px;
+    left: 14px;
+    top: 100%;
+    width: 12px;
     height: 10px;
-    margin-top: -5px;
     background: #fff;
-    clip-path: polygon(0 50%, 100% 0, 100% 100%);
+    clip-path: polygon(0 0, 100% 0, 0 100%);
 }
 
 /* Entrada: ela sobe de dentro do disco, depois o balao aparece */
 footer.revelar .avatar-disco img { transform: translateY(105%); }
-footer.revelar .avatar-balao { opacity: 0; transform: scale(0.6) translateX(-12px); }
+footer.revelar .avatar-balao { opacity: 0; transform: scale(0.6) translateY(8px); }
 
 /* Depois de entrar, o disco deixa de cortar: o pulo passa por cima da borda */
 #avatar-contato.parada .avatar-disco { overflow: visible; }
@@ -1705,15 +1714,11 @@ footer.revelar.visivel .avatar-balao {
 body.darkmode .avatar-balao { box-shadow: 4px 4px 0 #000; }
 
 @media (max-width: 480px) {
-    .avatar-disco { width: 112px; height: 112px; }
-    .avatar-disco img { width: 80px; height: 100px; }
-    .avatar-balao {
-        font-size: 13px;
-        padding: 8px 10px;
-        left: calc(100% - 18px);
-        top: -6px;
-        margin-top: 0;
-    }
+    #bloco-email { gap: 24px; }
+    .avatar-disco { width: 80px; height: 80px; }
+    .avatar-disco img { width: 56px; height: 70px; }
+    #bloco-email p { font-size: 16px; }
+    .avatar-balao { font-size: 13px; padding: 8px 10px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
