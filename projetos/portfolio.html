@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+        <title>Portfólio Isis Alencastro | Projeto de Isis Alencastro</title>
+        <meta name="description" content="Este site. Meu cartão de visitas digital, feito à mão com HTML, CSS e JavaScript, e que cresce junto comigo." />
+        <meta name="author" content="Isis Beatriz de Alencastro" />
+        <meta name="robots" content="index, follow, max-image-preview:large" />
+        <link rel="canonical" href="https://isisalencastro.site/projetos/portfolio.html" />
+        <link rel="alternate" hreflang="pt-BR" href="https://isisalencastro.site/projetos/portfolio.html" />
+
+        <!-- Open Graph (LinkedIn, WhatsApp, Facebook) -->
+        <meta property="og:type" content="article" />
+        <meta property="og:site_name" content="Isis Alencastro" />
+        <meta property="og:url" content="https://isisalencastro.site/projetos/portfolio.html" />
+        <meta property="og:title" content="Portfólio Isis Alencastro | Projeto de Isis Alencastro" />
+        <meta property="og:description" content="Este site. Meu cartão de visitas digital, feito à mão com HTML, CSS e JavaScript, e que cresce junto comigo." />
+        <meta property="og:image" content="https://isisalencastro.site/assets/images/capas-projetos/capa-proj-isisalencastro.png" />
+        <meta property="og:image:alt" content="Capa do projeto Portfólio Isis Alencastro" />
+        <meta property="og:locale" content="pt_BR" />
+
+        <!-- Twitter / X -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Portfólio Isis Alencastro | Projeto de Isis Alencastro" />
+        <meta name="twitter:description" content="Este site. Meu cartão de visitas digital, feito à mão com HTML, CSS e JavaScript, e que cresce junto comigo." />
+        <meta name="twitter:image" content="https://isisalencastro.site/assets/images/capas-projetos/capa-proj-isisalencastro.png" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="../assets/css/style.css?v=20261012" />
+        <link rel="stylesheet" href="../assets/css/responsividade.css?v=20261012" />
+        <link rel="icon" href="../assets/images/fotos/my-notion-face-portrait.png" type="image/png" />
+        <link rel="apple-touch-icon" href="../assets/images/fotos/my-notion-face-portrait.png" />
+        <meta name="theme-color" content="#2563eb" />
+        <meta name="color-scheme" content="light dark" />
+
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "CreativeWork",
+                    "@id": "https://isisalencastro.site/projetos/portfolio.html#projeto",
+                    "url": "https://isisalencastro.site/projetos/portfolio.html",
+                    "name": "Portfólio Isis Alencastro",
+                    "description": "Este site. Meu cartão de visitas digital, feito à mão com HTML, CSS e JavaScript, e que cresce junto comigo.",
+                    "image": "https://isisalencastro.site/assets/images/capas-projetos/capa-proj-isisalencastro.png",
+                    "inLanguage": "pt-BR",
+                    "keywords": "HTML5, CSS3, JavaScript, Schema.org (JSON-LD), GitHub Pages",
+                    "author": {
+                        "@id": "https://isisalencastro.site/#isis"
+                    },
+                    "isPartOf": {
+                        "@id": "https://isisalencastro.site/#site"
+                    },
+                    "dateCreated": "2025"
+                },
+                {
+                    "@type": "BreadcrumbList",
+                    "itemListElement": [
+                        {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Início",
+                            "item": "https://isisalencastro.site/"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Projetos",
+                            "item": "https://isisalencastro.site/projetos.html"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Portfólio Isis Alencastro",
+                            "item": "https://isisalencastro.site/projetos/portfolio.html"
+                        }
+                    ]
+                }
+            ]
+        }
+        </script>
+    </head>
+    <body class="pagina-case">
+        <header>
+            <a class="logo" href="../index.html" aria-label="Isis Alencastro, página inicial">ISIS<span class="logo-ponto">.</span></a>
+            <nav aria-label="Menu principal">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../projetos.html">Projetos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="https://www.ibaestudio.com" target="_blank" rel="noopener noreferrer" class="link-iba">IBA Estúdio <span aria-hidden="true">↗</span><span class="sr-only"> (abre em nova aba)</span></a></li>
+                </ul>
+                <button type="button" id="dark-mode-toggle" class="dark-mode-btn" aria-label="Alternar modo escuro">
+                    <img src="../assets/images/icons/moon.svg" alt="" width="24" height="24" />
+                    <img src="../assets/images/icons/sun.svg" alt="" width="24" height="24" />
+                </button>
+            </nav>
+            <button type="button" id="menu-toggle" class="menu-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div id="mobile-menu" class="mobile-menu" role="dialog" aria-label="Menu de navegação" aria-hidden="true">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../projetos.html">Projetos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="https://www.ibaestudio.com" target="_blank" rel="noopener noreferrer" class="link-iba">IBA Estúdio <span aria-hidden="true">↗</span><span class="sr-only"> (abre em nova aba)</span></a></li>
+                </ul>
+            </div>
+        </header>
+
+        <main>
+        <article id="case" aria-labelledby="case-titulo">
+            <section id="case-topo">
+                <nav class="case-trilha" aria-label="Você está em">
+                    <a href="../projetos.html">Projetos</a> <span aria-hidden="true">/</span> <a href="../projetos.html#desenvolvimento">Desenvolvimento</a>
+                </nav>
+                <p class="sobretitulo">Site pessoal · 2025</p>
+                <h1 id="case-titulo">Portfólio Isis Alencastro<span class="logo-ponto">.</span></h1>
+                <p class="case-lead">Este site. Meu cartão de visitas digital, feito à mão com HTML, CSS e JavaScript, e que cresce junto comigo.</p>
+                <div class="case-acoes">
+                    <a href="../index.html" class="btn-case">Ver site</a>
+                </div>
+            </section>
+
+            <figure id="case-capa">
+                <img src="../assets/images/capas-projetos/capa-proj-isisalencastro.png" alt="Capa do projeto Portfólio Isis Alencastro" width="1200" height="800" fetchpriority="high" />
+            </figure>
+
+            <div id="case-corpo">
+                <aside id="case-ficha" aria-label="Ficha do projeto">
+                    <dl>
+                        <div>
+                            <dt>Ano</dt>
+                            <dd>2025</dd>
+                        </div>
+                        <div>
+                            <dt>Tipo</dt>
+                            <dd>Site pessoal</dd>
+                        </div>
+                        <div>
+                            <dt>Categoria</dt>
+                            <dd>Desenvolvimento</dd>
+                        </div>
+                        <div>
+                            <dt>Ferramentas</dt>
+                            <dd>
+                                <ul class="case-stack">
+                                    <li>HTML5</li>
+                                    <li>CSS3</li>
+                                    <li>JavaScript</li>
+                                    <li>Schema.org (JSON-LD)</li>
+                                    <li>GitHub Pages</li>
+                                </ul>
+                            </dd>
+                        </div>
+                    </dl>
+                </aside>
+
+                <div id="case-texto">
+                    <section aria-labelledby="case-sec-1">
+                        <h2 id="case-sec-1">Por que eu fiz</h2>
+                        <p>Currículo e LinkedIn contam onde eu estive. Eu queria um lugar que mostrasse o que eu faço, do meu jeito, com os meus projetos e com a minha cara. E nada mostra melhor que eu sei fazer site do que o meu próprio site.</p>
+                    </section>
+                    <section aria-labelledby="case-sec-2">
+                        <h2 id="case-sec-2">A ideia</h2>
+                        <p>Um site estático, rápido e sem dependência: apresentação, sobre, serviços, projetos e contato. Simples de manter, simples de abrir em qualquer celular.</p>
+                        <p>Ele nunca foi pensado como coisa pronta. É um projeto vivo: cada vez que eu aprendo algo novo ou mudo de fase, ele muda junto.</p>
+                    </section>
+                    <section aria-labelledby="case-sec-3">
+                        <h2 id="case-sec-3">Processo criativo</h2>
+                        <p>Começou bem básico, com as seções principais e um efeito de digitação na apresentação. Depois vieram o modo escuro, o menu mobile, a página de projetos com abas para desenvolvimento, brand identity e automações, e o marquee com as ferramentas que eu uso.</p>
+                        <p>Quando eu me posicionei como desenvolvedora de software e AI Engineer, o site passou por uma modernização inteira: menos caixa alta, borda fina, mais respiro, e o logo deixou de ser IBA para virar ISIS. A IBA ganhou um espaço só dela, como o meu estúdio. Os títulos terminam com um ponto azul, o mesmo do logo, e no contato tem uma personagem em pixel art que sou eu.</p>
+                        <p>Cada mudança entra por pull request e é conferida antes de ir para o ar. É o mesmo cuidado que eu levo para os projetos de cliente.</p>
+                    </section>
+                    <section aria-labelledby="case-decisoes">
+                        <h2 id="case-decisoes">Decisões que eu tomei</h2>
+                        <ul class="case-decisoes">
+                            <li><strong>Sem framework</strong><span>Um site pessoal não precisa de React. HTML, CSS e JavaScript puro deixam tudo leve e fácil de entender.</span></li>
+                            <li><strong>SEO de verdade</strong><span>Domínio próprio, meta tags para compartilhamento, sitemap e dados estruturados que dizem ao Google quem eu sou e o que eu faço.</span></li>
+                            <li><strong>Movimento com respeito</strong><span>As animações aparecem ao rolar a página, mas quem configurou o sistema para menos movimento não recebe animação nenhuma.</span></li>
+                            <li><strong>Acessibilidade</strong><span>Contraste, foco visível, navegação por teclado e textos alternativos. Site bonito que nem todo mundo consegue usar não está pronto.</span></li>
+                        </ul>
+                    </section>
+                    <section aria-labelledby="case-aprendi" class="case-aprendi">
+                        <h2 id="case-aprendi">O que ficou</h2>
+                        <p>Fazer o próprio portfólio ensina a ser cliente e desenvolvedora ao mesmo tempo. É o projeto que mais mostra a minha evolução, porque dá para ver nele cada fase que eu passei.</p>
+                    </section>
+                </div>
+            </div>
+
+            <nav id="case-navegacao" aria-label="Outros projetos">
+                <a href="./prompt-manager.html" class="case-nav-ant"><span>Projeto anterior</span><strong>Prompt Manager</strong></a>
+                <a href="./jogos-iba.html" class="case-nav-prox"><span>Próximo projeto</span><strong>Jogos IBA</strong></a>
+            </nav>
+
+            <a href="../projetos.html#desenvolvimento" id="btn-voltar-home">Todos os projetos</a>
+        </article>
+        </main>
+        <footer id="contato" aria-labelledby="contato-titulo">
+            <div id="contato-cartao">
+                <div id="contato-texto">
+                    <p class="sobretitulo">Contato</p>
+                    <h2 id="contato-titulo">Tem algum projeto em mente?</h2>
+                    <p class="contato-lead">Me escreva por email ou WhatsApp e a gente conversa.</p>
+                    <div class="contato-acoes">
+                        <button type="button" id="btn-email" aria-label="Copiar email">Copiar email</button>
+                        <a href="https://wa.me/message/GGEAJPHMSN6MD1" target="_blank" rel="noopener noreferrer" class="btn-secundario">WhatsApp <span aria-hidden="true">↗</span></a>
+                    </div>
+                    <dl id="info-contato">
+                        <div>
+                            <dt>Email</dt>
+                            <dd id="email">alencastroisis@gmail.com</dd>
+                        </div>
+                        <div>
+                            <dt>Localização</dt>
+                            <dd>Porto Alegre, RS</dd>
+                        </div>
+                        <div>
+                            <dt>Redes</dt>
+                            <dd class="redes">
+                                <a href="https://www.linkedin.com/in/isisalencastro/" target="_blank" rel="noopener noreferrer" class="links-contato">LinkedIn</a>
+                                <a href="https://github.com/isisalencastro" target="_blank" rel="noopener noreferrer" class="links-contato">GitHub</a>
+                                <a href="https://www.youtube.com/@IsisAlencastro" target="_blank" rel="noopener noreferrer" class="links-contato">YouTube</a>
+                            </dd>
+                        </div>
+                    </dl>
+                </div>
+
+                <div id="avatar-contato" aria-hidden="true">
+                    <span class="avatar-balao">Bora conversar?</span>
+                    <div class="avatar-palco"><img src="../assets/images/avatar/isis-pixel.svg" alt="" width="128" height="160" /></div>
+                </div>
+            </div>
+
+            <div id="copy">
+                <p>&copy; 2026 - Todos os direitos reservados. | Design e código por Isis Alencastro.</p>
+            </div>
+        </footer>
+
+        <button type="button" id="btn-topo" aria-label="Voltar ao topo da página"><img src="../assets/images/icons/arrow-up-svgrepo-com.svg" alt="" width="24" height="24" /></button>
+
+    </body>
+    <script src="../assets/js/script.js?v=20261012" defer></script>
+    <script src="../assets/js/animacoes.js?v=20261012" defer></script>
+</html>
