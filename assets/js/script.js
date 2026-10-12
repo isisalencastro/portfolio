@@ -178,19 +178,20 @@ const tabBtns = document.querySelectorAll('.tab-btn');
 const tabContents = document.querySelectorAll('.tab-content');
 if (tabBtns.length && tabContents.length) {
     function activateTab(tabName) {
+        const targetBtn = document.querySelector(`.tab-btn[data-tab="${tabName}"]`);
+        const targetPanel = document.getElementById('tab-' + tabName);
+        // Ancora que nao e aba (ex.: #contato) nao mexe nas abas
+        if (!targetBtn || !targetPanel) return;
+
         tabBtns.forEach(b => {
             b.classList.remove('active');
             b.setAttribute('aria-selected', 'false');
         });
         tabContents.forEach(c => c.classList.remove('active'));
 
-        const targetBtn = document.querySelector(`.tab-btn[data-tab="${tabName}"]`);
-        const targetPanel = document.getElementById('tab-' + tabName);
-        if (targetBtn && targetPanel) {
-            targetBtn.classList.add('active');
-            targetBtn.setAttribute('aria-selected', 'true');
-            targetPanel.classList.add('active');
-        }
+        targetBtn.classList.add('active');
+        targetBtn.setAttribute('aria-selected', 'true');
+        targetPanel.classList.add('active');
     }
 
     tabBtns.forEach(btn => {
