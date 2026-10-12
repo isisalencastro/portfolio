@@ -90,6 +90,12 @@ portfolio/
 - Mesmo header (link para Home), modo escuro e footer de contato
 - Botão “voltar ao topo” e script para copiar email
 
+### `projetos/<projeto>.html`
+
+- Uma página por projeto, em primeira pessoa: por que eu fiz, a ideia, o processo criativo, decisões que eu tomei e o que ficou
+- Ficha com ano, tipo, categoria e ferramentas, links para o site ou repositório e navegação para o projeto anterior e o próximo
+- Os cartões de `index.html` e `projetos.html` têm o botão “Sobre o projeto” apontando para essas páginas
+
 ---
 
 ## Como executar

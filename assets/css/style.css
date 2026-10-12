@@ -2370,3 +2370,314 @@ header a.logo { text-decoration: none; }
     #iba-chamada { padding: 24px 20px; }
     .iba-lead { font-size: 17px; }
 }
+
+/* ================= PAGINA DE CADA PROJETO (12/10/2026) ================= */
+/* Uma pagina por projeto em /projetos/: por que eu fiz, a ideia, o processo,
+   as decisoes e o que ficou. Coluna de leitura estreita e ficha ao lado. */
+
+.pagina-case main {
+    padding: max(112px, calc(88px + var(--safe-top))) 20px 96px;
+}
+
+#case {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+}
+
+#case-topo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    max-width: 820px;
+}
+
+.case-trilha {
+    font-size: 15px;
+    color: var(--text-muted);
+}
+
+.case-trilha a {
+    color: var(--text-muted);
+    text-decoration: none;
+}
+
+.case-trilha a:hover { color: var(--primary-color); }
+
+#case-topo .sobretitulo { color: var(--primary-color); }
+
+#case-topo h1 {
+    font-size: clamp(2.4rem, 6vw, 4rem);
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    font-weight: 800;
+    color: var(--text-color);
+}
+
+.case-lead {
+    font-size: 21px;
+    line-height: 1.6;
+    color: var(--text-muted);
+}
+
+.case-acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.btn-case {
+    font-family: var(--font-main);
+    font-size: 17px;
+    font-weight: 600;
+    padding: 12px 26px;
+    border-radius: 999px;
+    border: 1px solid var(--primary-color);
+    background-color: var(--primary-color);
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-case:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+.btn-case-sec {
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+.btn-case-sec:hover {
+    background-color: color-mix(in srgb, var(--primary-color) 10%, transparent);
+}
+
+#case-capa img {
+    width: 100%;
+    max-height: 560px;
+    object-fit: cover;
+    border-radius: var(--radius-cartao);
+    border: 1px solid var(--borda);
+    box-shadow: var(--sombra-cartao-alta);
+}
+
+#case-corpo {
+    display: grid;
+    grid-template-columns: 280px minmax(0, 1fr);
+    gap: 64px;
+    align-items: start;
+}
+
+#case-ficha {
+    position: sticky;
+    top: 96px;
+    padding: 24px;
+    background: var(--superficie);
+    border: 1px solid var(--borda);
+    border-radius: var(--radius-cartao);
+    box-shadow: var(--sombra-cartao);
+}
+
+#case-ficha dl {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+#case-ficha dt {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+}
+
+#case-ficha dd {
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+.case-stack {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 4px;
+}
+
+.case-stack li {
+    font-size: 14px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--primary-color) 9%, transparent);
+    color: var(--text-color);
+}
+
+#case-texto {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    max-width: 720px;
+}
+
+#case-texto section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#case-texto h2 {
+    font-size: 28px;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: var(--text-color);
+    text-align: left;
+    margin: 0;
+}
+
+#case-texto h2::after {
+    content: ".";
+    color: var(--primary-color);
+}
+
+#case-texto p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
+.case-decisoes {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.case-decisoes li {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 20px 22px;
+    border-radius: 16px;
+    border: 1px solid var(--borda);
+    background: var(--superficie);
+}
+
+.case-decisoes strong {
+    font-size: 17px;
+    color: var(--text-color);
+}
+
+.case-decisoes span {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-muted);
+}
+
+.case-aprendi {
+    padding: 28px 32px;
+    border-radius: var(--radius-cartao);
+    border-left: 4px solid var(--primary-color);
+    background:
+        radial-gradient(120% 160% at 100% 0%, color-mix(in srgb, var(--primary-color) 12%, transparent) 0%, transparent 60%),
+        var(--superficie);
+}
+
+#case-navegacao {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    padding-top: 40px;
+    border-top: 1px solid var(--borda);
+}
+
+#case-navegacao a {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 20px 24px;
+    border-radius: 16px;
+    border: 1px solid var(--borda);
+    background: var(--superficie);
+    text-decoration: none;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+#case-navegacao a:hover {
+    border-color: var(--borda-forte);
+    transform: translateY(-3px);
+}
+
+#case-navegacao span {
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+#case-navegacao strong {
+    font-size: 19px;
+    color: var(--text-color);
+}
+
+.case-nav-ant span::before { content: "← "; }
+.case-nav-prox { text-align: right; }
+.case-nav-prox span::after { content: " →"; }
+
+#case #btn-voltar-home { margin-top: 0; }
+
+/* Cartoes da lista de projetos: link para a pagina do projeto ao lado do Ver Projeto */
+.acoes-projeto {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.infos-projeto a.btn-projeto-sec,
+.brandbook-texto a.btn-projeto-sec {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.infos-projeto a.btn-projeto-sec:hover,
+.brandbook-texto a.btn-projeto-sec:hover {
+    background-color: color-mix(in srgb, var(--primary-color) 10%, transparent);
+    color: var(--primary-color);
+}
+
+@media (max-width: 900px) {
+    #case-corpo {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    #case-ficha { position: static; }
+}
+
+@media (max-width: 560px) {
+    .pagina-case main { padding: max(96px, calc(76px + var(--safe-top))) 16px 72px; }
+    #case { gap: 40px; }
+    .case-lead { font-size: 18px; }
+    #case-texto { gap: 40px; }
+    #case-texto h2 { font-size: 24px; }
+    #case-texto p { font-size: 17px; }
+    .case-decisoes { grid-template-columns: 1fr; }
+    .case-aprendi { padding: 22px 20px; }
+    #case-navegacao { grid-template-columns: 1fr; }
+    .case-nav-prox { text-align: left; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-case,
+    #case-navegacao a { transition: none; }
+    .btn-case:hover,
+    #case-navegacao a:hover { transform: none; }
+}
