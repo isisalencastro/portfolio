@@ -96,6 +96,14 @@ portfolio/
 - Ficha com ano, tipo, categoria e ferramentas, links para o site ou repositório e navegação para o projeto anterior e o próximo
 - Os cartões de `index.html` e `projetos.html` têm o botão “Sobre o projeto” apontando para essas páginas
 
+### `en/` (English version)
+
+- Versão em inglês de todas as páginas: `en/index.html`, `en/projects.html` e `en/projects/<projeto>.html` (mesmos nomes de arquivo das páginas de projeto)
+- Botão **EN / PT** no topo de cada página leva para a mesma página no outro idioma
+- Cada página declara as duas versões com `hreflang` (`pt-BR`, `en` e `x-default` em português), e o `sitemap.xml` lista as duas
+- Os textos que o JavaScript escreve (auto-typing, “Copiado!”, rótulo do menu) mudam conforme o `lang` da página
+- Ao editar um texto em português, lembre de atualizar a página equivalente em `en/`
+
 ---
 
 ## Como executar

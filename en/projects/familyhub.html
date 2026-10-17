@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+        <title>FamilyHub | Project by Isis Alencastro</title>
+        <meta name="description" content="A desktop app that brings household life into one place: finances, tasks, documents, calendar, meals and pets, synced across the family's computers." />
+        <meta name="author" content="Isis Beatriz de Alencastro" />
+        <meta name="robots" content="index, follow, max-image-preview:large" />
+        <link rel="canonical" href="https://isisalencastro.site/en/projects/familyhub.html" />
+        <link rel="alternate" hreflang="pt-BR" href="https://isisalencastro.site/projetos/familyhub.html" />
+        <link rel="alternate" hreflang="en" href="https://isisalencastro.site/en/projects/familyhub.html" />
+        <link rel="alternate" hreflang="x-default" href="https://isisalencastro.site/projetos/familyhub.html" />
+
+        <!-- Open Graph (LinkedIn, WhatsApp, Facebook) -->
+        <meta property="og:type" content="article" />
+        <meta property="og:site_name" content="Isis Alencastro" />
+        <meta property="og:url" content="https://isisalencastro.site/en/projects/familyhub.html" />
+        <meta property="og:title" content="FamilyHub | Project by Isis Alencastro" />
+        <meta property="og:description" content="A desktop app that brings household life into one place: finances, tasks, documents, calendar, meals and pets, synced across the family's computers." />
+        <meta property="og:image" content="https://isisalencastro.site/assets/images/capas-projetos/capa-proj-familyhub.png" />
+        <meta property="og:image:alt" content="FamilyHub project cover" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:locale:alternate" content="pt_BR" />
+
+        <!-- Twitter / X -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="FamilyHub | Project by Isis Alencastro" />
+        <meta name="twitter:description" content="A desktop app that brings household life into one place: finances, tasks, documents, calendar, meals and pets, synced across the family's computers." />
+        <meta name="twitter:image" content="https://isisalencastro.site/assets/images/capas-projetos/capa-proj-familyhub.png" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="../../assets/css/style.css?v=20261017" />
+        <link rel="stylesheet" href="../../assets/css/responsividade.css?v=20261017" />
+        <link rel="icon" href="../../assets/images/fotos/my-notion-face-portrait.png" type="image/png" />
+        <link rel="apple-touch-icon" href="../../assets/images/fotos/my-notion-face-portrait.png" />
+        <meta name="theme-color" content="#2563eb" />
+        <meta name="color-scheme" content="light dark" />
+
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "CreativeWork",
+                    "@id": "https://isisalencastro.site/en/projects/familyhub.html#projeto",
+                    "url": "https://isisalencastro.site/en/projects/familyhub.html",
+                    "name": "FamilyHub",
+                    "description": "A desktop app that brings household life into one place: finances, tasks, documents, calendar, meals and pets, synced across the family's computers.",
+                    "image": "https://isisalencastro.site/assets/images/capas-projetos/capa-proj-familyhub.png",
+                    "inLanguage": "en",
+                    "keywords": "Tauri v2 (Rust), React 19, TypeScript, Vite, Tailwind CSS 4, Zustand, Supabase, IndexedDB, Vitest, GitHub Actions",
+                    "author": {
+                        "@id": "https://isisalencastro.site/#isis"
+                    },
+                    "isPartOf": {
+                        "@id": "https://isisalencastro.site/#site"
+                    },
+                    "dateCreated": "2026"
+                },
+                {
+                    "@type": "BreadcrumbList",
+                    "itemListElement": [
+                        {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://isisalencastro.site/en/"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Projects",
+                            "item": "https://isisalencastro.site/en/projects.html"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "FamilyHub",
+                            "item": "https://isisalencastro.site/en/projects/familyhub.html"
+                        }
+                    ]
+                }
+            ]
+        }
+        </script>
+    </head>
+    <body class="pagina-case">
+        <header>
+            <a class="logo" href="../index.html" aria-label="Isis Alencastro, home page">ISIS<span class="logo-ponto">.</span></a>
+            <nav aria-label="Main menu">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../projects.html">Projects</a></li>
+                    <li><a href="#contato">Contact</a></li>
+                    <li><a href="https://www.ibaestudio.com" target="_blank" rel="noopener noreferrer" class="link-iba">IBA Estúdio <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a></li>
+                </ul>
+                <a class="lang-switch" href="../../projetos/familyhub.html" hreflang="pt-BR" lang="pt-BR" aria-label="Ler em português">PT</a>
+                <button type="button" id="dark-mode-toggle" class="dark-mode-btn" aria-label="Toggle dark mode">
+                    <img src="../../assets/images/icons/moon.svg" alt="" width="24" height="24" />
+                    <img src="../../assets/images/icons/sun.svg" alt="" width="24" height="24" />
+                </button>
+            </nav>
+            <button type="button" id="menu-toggle" class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div id="mobile-menu" class="mobile-menu" role="dialog" aria-label="Navigation menu" aria-hidden="true">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../projects.html">Projects</a></li>
+                    <li><a href="#contato">Contact</a></li>
+                    <li><a href="https://www.ibaestudio.com" target="_blank" rel="noopener noreferrer" class="link-iba">IBA Estúdio <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a></li>
+                </ul>
+            </div>
+        </header>
+
+        <main>
+        <article id="case" aria-labelledby="case-titulo">
+            <section id="case-topo">
+                <nav class="case-trilha" aria-label="You are here">
+                    <a href="../projects.html">Projects</a> <span aria-hidden="true">/</span> <a href="../projects.html#desenvolvimento">Development</a>
+                </nav>
+                <p class="sobretitulo">Desktop app (Windows) · 2026</p>
+                <h1 id="case-titulo">FamilyHub<span class="logo-ponto">.</span></h1>
+                <p class="case-lead">A desktop app that brings household life into one place: finances, tasks, documents, calendar, meals and pets, synced across the family's computers.</p>
+                <div class="case-acoes">
+                    <a href="https://github.com/isisalencastro/FamilyHub" class="btn-case" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span></a>
+                </div>
+            </section>
+
+            <figure id="case-capa">
+                <img src="../../assets/images/capas-projetos/capa-proj-familyhub.png" alt="FamilyHub project cover" width="1200" height="800" fetchpriority="high" />
+            </figure>
+
+            <div id="case-corpo">
+                <aside id="case-ficha" aria-label="Project details">
+                    <dl>
+                        <div>
+                            <dt>Year</dt>
+                            <dd>2026</dd>
+                        </div>
+                        <div>
+                            <dt>Type</dt>
+                            <dd>Desktop app (Windows)</dd>
+                        </div>
+                        <div>
+                            <dt>Category</dt>
+                            <dd>Development</dd>
+                        </div>
+                        <div>
+                            <dt>Tools</dt>
+                            <dd>
+                                <ul class="case-stack">
+                                    <li>Tauri v2 (Rust)</li>
+                                    <li>React 19</li>
+                                    <li>TypeScript</li>
+                                    <li>Vite</li>
+                                    <li>Tailwind CSS 4</li>
+                                    <li>Zustand</li>
+                                    <li>Supabase</li>
+                                    <li>IndexedDB</li>
+                                    <li>Vitest</li>
+                                    <li>GitHub Actions</li>
+                                </ul>
+                            </dd>
+                        </div>
+                    </dl>
+                </aside>
+
+                <div id="case-texto">
+                    <section aria-labelledby="case-sec-1">
+                        <h2 id="case-sec-1">Why I made it</h2>
+                        <p>Running the household was scattered all over the place. Bills to pay in one app, the shopping list on WhatsApp, documents in some lost folder on the computer, the pet's vaccines written on a piece of paper. Every time someone needed a piece of information, a search began.</p>
+                        <p>I wanted a single place that opened right on the computer and showed the same thing to everyone in the house. No ready-made app did exactly that the way we live, so I decided to build my own.</p>
+                    </section>
+                    <section aria-labelledby="case-sec-2">
+                        <h2 id="case-sec-2">The idea</h2>
+                        <p>FamilyHub is not just another to-do app. It's a hub: the home screen shows the weather, calendar, news, what's pending and how the month's finances are doing, and each module takes care of one part of the routine.</p>
+                        <p>It has workspaces: mine, Angélica's and an Overview. Each person has their own bills and appointments, and the house has its own. Separating that from the start kept everything from turning into one giant, confusing list.</p>
+                    </section>
+                    <section aria-labelledby="case-sec-3">
+                        <h2 id="case-sec-3">Creative process</h2>
+                        <p>I built it one module at a time: tasks on a drag-and-drop Kanban board, shopping list, goals, finances, documents, a calendar with comments per day, a weekly meal plan and pets with vaccine history. Each module has its own state (there are 13 Zustand stores), which made it easy to change one without breaking another.</p>
+                        <p>The hardest part wasn't the screens, it was syncing. A change made on one computer has to show up on the other without anyone hitting refresh. For that I used Supabase Realtime, and for documents I added a local IndexedDB cache so the app doesn't depend on the internet every time it opens a file.</p>
+                    </section>
+                    <section aria-labelledby="case-decisoes">
+                        <h2 id="case-decisoes">Decisions I made</h2>
+                        <ul class="case-decisoes">
+                            <li><strong>Tauri instead of Electron</strong><span>The app stays light, opens fast and uses the system's own engine. As a bonus, I learned to deal with the Rust toolchain.</span></li>
+                            <li><strong>Supabase as the backend</strong><span>PostgreSQL, real time and file storage in the same place, with migrations versioned in the repository.</span></li>
+                            <li><strong>Automatic updates</strong><span>When a new version comes out, GitHub Actions builds the installer and the app shows a notice with a progress bar. Nobody has to reinstall anything by hand.</span></li>
+                            <li><strong>Automated tests</strong><span>Vitest and Testing Library, so I can change one module without fear of breaking another.</span></li>
+                        </ul>
+                    </section>
+                    <section aria-labelledby="case-aprendi" class="case-aprendi">
+                        <h2 id="case-aprendi">What I took away</h2>
+                        <p>This is the project that pushed me furthest out of my comfort zone: a desktop app, Rust, a release pipeline and real-time sync. And I learned that software for your family has the most demanding user there is, because they live with you.</p>
+                    </section>
+                </div>
+            </div>
+
+            <nav id="case-navegacao" aria-label="Other projects">
+                <a href="./brand-aria.html" class="case-nav-ant"><span>Previous project</span><strong>Aria Agency</strong></a>
+                <a href="./prompt-manager.html" class="case-nav-prox"><span>Next project</span><strong>Prompt Manager</strong></a>
+            </nav>
+
+            <a href="../projects.html#desenvolvimento" id="btn-voltar-home">All projects</a>
+        </article>
+        </main>
+        <footer id="contato" aria-labelledby="contato-titulo">
+            <div id="contato-cartao">
+                <div id="contato-texto">
+                    <p class="sobretitulo">Contact</p>
+                    <h2 id="contato-titulo">Have a project in mind?</h2>
+                    <p class="contato-lead">Send me an email or a WhatsApp message and let's talk.</p>
+                    <div class="contato-acoes">
+                        <button type="button" id="btn-email" aria-label="Copy email">Copy email</button>
+                        <a href="https://wa.me/message/GGEAJPHMSN6MD1" target="_blank" rel="noopener noreferrer" class="btn-secundario">WhatsApp <span aria-hidden="true">↗</span></a>
+                    </div>
+                    <dl id="info-contato">
+                        <div>
+                            <dt>Email</dt>
+                            <dd id="email">alencastroisis@gmail.com</dd>
+                        </div>
+                        <div>
+                            <dt>Location</dt>
+                            <dd>Porto Alegre, Brazil</dd>
+                        </div>
+                        <div>
+                            <dt>Social</dt>
+                            <dd class="redes">
+                                <a href="https://www.linkedin.com/in/isisalencastro/" target="_blank" rel="noopener noreferrer" class="links-contato">LinkedIn</a>
+                                <a href="https://github.com/isisalencastro" target="_blank" rel="noopener noreferrer" class="links-contato">GitHub</a>
+                                <a href="https://www.youtube.com/@IsisAlencastro" target="_blank" rel="noopener noreferrer" class="links-contato">YouTube</a>
+                            </dd>
+                        </div>
+                    </dl>
+                </div>
+
+                <div id="avatar-contato" aria-hidden="true">
+                    <span class="avatar-balao">Let's talk?</span>
+                    <div class="avatar-palco"><img src="../../assets/images/avatar/isis-pixel.svg" alt="" width="128" height="160" /></div>
+                </div>
+            </div>
+
+            <div id="copy">
+                <p>&copy; 2026 - All rights reserved. | Design and code by Isis Alencastro.</p>
+            </div>
+        </footer>
+
+        <button type="button" id="btn-topo" aria-label="Back to the top of the page"><img src="../../assets/images/icons/arrow-up-svgrepo-com.svg" alt="" width="24" height="24" /></button>
+
+    </body>
+    <script src="../../assets/js/script.js?v=20261017" defer></script>
+    <script src="../../assets/js/animacoes.js?v=20261017" defer></script>
+</html>

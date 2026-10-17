@@ -2681,3 +2681,21 @@ header a.logo { text-decoration: none; }
     .btn-case:hover,
     #case-navegacao a:hover { transform: none; }
 }
+
+/* ---- Troca de idioma (PT/EN), ao lado do botao de modo escuro ---- */
+header nav a.lang-switch {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--text-color);
+    padding: 6px 12px;
+    border: 1px solid var(--borda);
+    min-height: var(--touch-target, 44px);
+    display: inline-flex;
+    align-items: center;
+}
+
+header nav a.lang-switch:hover {
+    color: var(--primary-color);
+    border-color: var(--borda-forte);
+}
