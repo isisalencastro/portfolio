@@ -631,6 +631,8 @@ header nav a:hover::after {
 }
 
 #foto-sobre img {
+    display: block;
+    margin: 0 auto;
     max-width: 240px;
     border-radius: 12px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
