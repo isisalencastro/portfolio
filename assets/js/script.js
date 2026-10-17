@@ -230,3 +230,6 @@ if (btnEmail && emailEl) {
 }
 
 
+
+// Currículo: o botão "Imprimir ou salvar em PDF" abre a impressão do navegador (o CSS de impressão deixa só o currículo).
+document.getElementById('btn-imprimir')?.addEventListener('click', () => window.print());

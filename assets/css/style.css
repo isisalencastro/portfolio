@@ -2699,3 +2699,198 @@ header nav a.lang-switch:hover {
     color: var(--primary-color);
     border-color: var(--borda-forte);
 }
+
+/* ---------- Currículo (curriculo.html e en/resume.html): o currículo dentro do site, na língua da página ---------- */
+
+.curriculo .cv-secao {
+    gap: 28px;
+}
+
+.cv-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 20px;
+    border-left: 2px solid var(--borda);
+}
+
+.cv-item h3 {
+    font-size: 20px;
+    line-height: 1.35;
+    color: var(--text-color);
+    margin: 0;
+}
+
+.cv-empresa {
+    font-weight: 500;
+    color: var(--text-muted);
+}
+
+#case-texto .cv-meta {
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.cv-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-left: 20px;
+    margin: 0;
+}
+
+.cv-lista li {
+    font-size: 17px;
+    line-height: 1.65;
+    color: var(--text-color);
+}
+
+.cv-lista li::marker {
+    color: var(--primary-color);
+}
+
+.cv-contato,
+.cv-idiomas {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.cv-contato a {
+    color: var(--text-color);
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.cv-contato a:hover {
+    color: var(--primary-color);
+}
+
+.cv-idiomas {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cv-stack-grupo {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-top: 10px;
+}
+
+.cv-stack-grupo:first-child {
+    margin-top: 0;
+}
+
+.cv-projetos {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.cv-projetos a {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    height: 100%;
+    padding: 20px 22px;
+    border-radius: 16px;
+    border: 1px solid var(--borda);
+    background: var(--superficie);
+    text-decoration: none;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.cv-projetos a:hover {
+    border-color: var(--borda-forte);
+    transform: translateY(-3px);
+}
+
+.cv-projetos strong {
+    font-size: 17px;
+    color: var(--text-color);
+}
+
+.cv-projetos span {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--text-muted);
+}
+
+button.btn-case {
+    cursor: pointer;
+}
+
+@media (max-width: 560px) {
+    .cv-projetos { grid-template-columns: 1fr; }
+    .cv-item h3 { font-size: 18px; }
+    .cv-lista li { font-size: 16px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .cv-projetos a { transition: none; }
+}
+
+/* Impressão ("salvar em PDF"): só o currículo, em preto no branco, sem o site em volta. */
+@media print {
+    .pagina-curriculo header,
+    .pagina-curriculo footer,
+    .pagina-curriculo #btn-topo,
+    .pagina-curriculo .case-trilha,
+    .pagina-curriculo .case-acoes,
+    .pagina-curriculo #btn-voltar-home,
+    .pagina-curriculo #progresso-leitura {
+        display: none !important;
+    }
+
+    .pagina-curriculo,
+    .pagina-curriculo main {
+        background: #fff !important;
+        color: #111 !important;
+        padding: 0 !important;
+    }
+
+    .pagina-curriculo * {
+        color: #111 !important;
+        box-shadow: none !important;
+        animation: none !important;
+        transition: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    .pagina-curriculo #case { gap: 18px; }
+    .pagina-curriculo #case-topo h1 { font-size: 30px; }
+    .pagina-curriculo .case-lead { font-size: 14px; }
+    .pagina-curriculo #case-corpo { grid-template-columns: 190px minmax(0, 1fr); gap: 24px; }
+    .pagina-curriculo #case-ficha { position: static; padding: 0; border: 0; background: none; }
+    .pagina-curriculo #case-ficha dd,
+    .pagina-curriculo .cv-contato a { font-size: 11px; }
+    .pagina-curriculo .case-stack li { font-size: 10px; padding: 2px 6px; background: #eef2fb !important; }
+    .pagina-curriculo #case-texto { gap: 16px; max-width: none; }
+    .pagina-curriculo #case-texto h2 { font-size: 16px; }
+    .pagina-curriculo #case-texto p,
+    .pagina-curriculo .cv-lista li,
+    .pagina-curriculo .cv-projetos span { font-size: 11.5px; line-height: 1.5; }
+    .pagina-curriculo .cv-item h3,
+    .pagina-curriculo .cv-projetos strong { font-size: 13px; }
+    .pagina-curriculo #case-texto .cv-meta { font-size: 11px; }
+    .pagina-curriculo .cv-secao { gap: 12px; }
+    .pagina-curriculo .cv-item { gap: 4px; break-inside: avoid; }
+    .pagina-curriculo .cv-projetos { gap: 8px; }
+    .pagina-curriculo .cv-projetos a { padding: 8px 10px; }
+    .pagina-curriculo #case-texto h2::after,
+    .pagina-curriculo .logo-ponto,
+    .pagina-curriculo .cv-lista li::marker { color: #2563eb !important; }
+    @page { margin: 14mm; }
+}
+.cv-item-topo {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
