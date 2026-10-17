@@ -117,7 +117,7 @@
             void avatar.offsetWidth; // reinicia a animacao se clicar de novo
             avatar.classList.add('pulou');
             if (balao) {
-                balao.textContent = 'Copiado!';
+                balao.textContent = document.documentElement.lang === 'en' ? 'Copied!' : 'Copiado!';
                 window.clearTimeout(timerBalao);
                 timerBalao = window.setTimeout(function () { balao.textContent = textoBalao; }, 2400);
             }

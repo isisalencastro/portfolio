@@ -1,3 +1,6 @@
+// Paginas em ingles ficam em /en/ com <html lang="en">
+const emIngles = document.documentElement.lang === 'en';
+
 // ------------------ BOTÃO VOLTA AO TOPO -------------------------------------
 function voltarAoTopo() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -67,7 +70,7 @@ if (menuToggle && mobileMenu) {
         mobileMenu.classList.add('active');
         mobileMenu.setAttribute('aria-hidden', 'false');
         menuToggle.setAttribute('aria-expanded', 'true');
-        menuToggle.setAttribute('aria-label', 'Fechar menu');
+        menuToggle.setAttribute('aria-label', emIngles ? 'Close menu' : 'Fechar menu');
         document.body.style.overflow = 'hidden';
     }
     function closeMenu() {
@@ -75,7 +78,7 @@ if (menuToggle && mobileMenu) {
         mobileMenu.classList.remove('active');
         mobileMenu.setAttribute('aria-hidden', 'true');
         menuToggle.setAttribute('aria-expanded', 'false');
-        menuToggle.setAttribute('aria-label', 'Abrir menu');
+        menuToggle.setAttribute('aria-label', emIngles ? 'Open menu' : 'Abrir menu');
         document.body.style.overflow = '';
     }
     menuToggle.addEventListener('click', () => {
@@ -91,7 +94,11 @@ if (menuToggle && mobileMenu) {
 }
 
 // ------------------------ AUTOTYPING AREAS DE TRABALHO ---------------------------------
-const texts = [
+const texts = emIngles ? [
+    "a Software Developer",
+    "an AI Engineer",
+    "a Content Creator"
+] : [
     "Desenvolvedora de Software",
     "AI Engineer",
     "Criadora de Conteúdo"
@@ -215,7 +222,7 @@ if (btnEmail && emailEl) {
             btnEmail._volta = setTimeout(() => { btnEmail.textContent = textoOriginal; }, 2200);
         };
         navigator.clipboard.writeText(email).then(() => {
-            avisa('Copiado!');
+            avisa(emIngles ? 'Copied!' : 'Copiado!');
             // A personagem do contato comemora (ver assets/js/animacoes.js)
             document.dispatchEvent(new CustomEvent('email-copiado'));
         }).catch(() => avisa(email));
